@@ -1,0 +1,5 @@
+{
+  "title": "Novu Benchmark",
+  "description": "Performance results of AI coding models on Novu tasks, measuring success rate and execution time with high precision.",
+  "github_repo": "https://github.com/kweizh/novu-benchmark"
+}
