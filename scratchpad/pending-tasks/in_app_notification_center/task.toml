@@ -1,0 +1,6 @@
+[environment]
+image = "ubuntu:24.04"
+
+[dependencies]
+# Dependencies required by the test verifier environment
+python = ["pytest", "pochi-verifier"]

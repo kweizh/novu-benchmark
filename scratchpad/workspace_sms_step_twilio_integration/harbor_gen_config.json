@@ -1,0 +1,7 @@
+{
+  "library_name": "Novu",
+  "complexity_level": "multi-step sequential commands sets",
+  "deep_research_path": "../../plan.md",
+  "task_name": "sms_step_twilio_integration",
+  "output_dir": "../../scratchpad/pending-tasks"
+}
