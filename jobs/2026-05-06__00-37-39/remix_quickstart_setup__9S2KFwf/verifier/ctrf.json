@@ -1,0 +1,66 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 5,
+            "passed": 4,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1777999837.1174457,
+            "stop": 1777999897.2061212
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_package_json_has_novu",
+                "status": "passed",
+                "duration": 0.0006885360926389694,
+                "start": 1777999837.1520028,
+                "stop": 1777999837.1530197,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_workflows_file_exists",
+                "status": "passed",
+                "duration": 0.000533316982910037,
+                "start": 1777999837.1532662,
+                "stop": 1777999837.1539564,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_api_route_exists",
+                "status": "passed",
+                "duration": 0.0004605068825185299,
+                "start": 1777999837.1541686,
+                "stop": 1777999837.1547701,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_env_file_exists",
+                "status": "passed",
+                "duration": 0.000447605038061738,
+                "start": 1777999837.1549573,
+                "stop": 1777999837.1555488,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_api_endpoint_reachable",
+                "status": "failed",
+                "duration": 60.01188358198851,
+                "start": 1777999837.1557348,
+                "stop": 1777999897.2058375,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "@pytest.fixture(scope=\"module\")\n    def start_app():\n        # Start the app\n        process = subprocess.Popen(\n            [\"npm\", \"run\", \"dev\"],\n            cwd=PROJECT_DIR,\n            stdout=subprocess.PIPE,\n            stderr=subprocess.PIPE,\n            preexec_fn=os.setsid\n        )\n    \n        # Wait for the app to be ready\n        if not wait_for_port(5173):\n            import signal\n            os.killpg(os.getpgid(process.pid), signal.SIGTERM)\n>           pytest.fail(\"App failed to start and listen on port 5173.\")\nE           Failed: App failed to start and listen on port 5173.\n\ntests/test_final_state.py:65: Failed"
+            }
+        ]
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1778000151.1326878,
+            "stop": 1778000181.254081
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_bridge_endpoint",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 30.06528540700674,
+                "start": 1778000151.1612387,
+                "stop": 1778000181.2538,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_bridge_endpoint():\n        # Attempt to fetch the discover endpoint\n        max_retries = 30\n        discovered = None\n        for _ in range(max_retries):\n            try:\n                req = urllib.request.Request(\"http://localhost:3000/api/novu?action=discover\")\n                with urllib.request.urlopen(req) as response:\n                    if response.status == 200:\n                        data = response.read().decode('utf-8')\n                        discovered = json.loads(data)\n                        break\n            except urllib.error.URLError:\n                time.sleep(1)\n    \n>       assert discovered is not None, \"Failed to reach the Novu bridge endpoint at /api/novu?action=discover\"\nE       AssertionError: Failed to reach the Novu bridge endpoint at /api/novu?action=discover\nE       assert None is not None\n\ntests/test_final_state.py:22: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}
