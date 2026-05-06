@@ -5,18 +5,478 @@
 5:I[36064,["/novu-benchmark/_next/static/chunks/d2c13bb33c4fcd54.js","/novu-benchmark/_next/static/chunks/c21188132e0e0d48.js"],"default"]
 6:I[81497,["/novu-benchmark/_next/static/chunks/d2c13bb33c4fcd54.js","/novu-benchmark/_next/static/chunks/c21188132e0e0d48.js"],"default"]
 7:I[42654,["/novu-benchmark/_next/static/chunks/babff0e7418ab052.js","/novu-benchmark/_next/static/chunks/3ecbb78a8ff87549.js","/novu-benchmark/_next/static/chunks/25c3d9739926ecd6.js","/novu-benchmark/_next/static/chunks/be08138953094657.js"],"TasksPageClient"]
-c:I[9986,["/novu-benchmark/_next/static/chunks/d2c13bb33c4fcd54.js","/novu-benchmark/_next/static/chunks/c21188132e0e0d48.js"],"default"]
-:HL["/novu-benchmark/_next/static/chunks/29c80e0ec759ef35.css","style"]
+1d:I[9986,["/novu-benchmark/_next/static/chunks/d2c13bb33c4fcd54.js","/novu-benchmark/_next/static/chunks/c21188132e0e0d48.js"],"default"]
+:HL["/novu-benchmark/_next/static/chunks/aae6fc4800eaf3c2.css","style"]
 :HL["/novu-benchmark/_next/static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-0:{"P":null,"b":"02gfTBlM6qEVjn7aNpImS","c":["","tasks",""],"q":"","i":false,"f":[[["",{"children":["tasks",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/novu-benchmark/_next/static/chunks/29c80e0ec759ef35.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/novu-benchmark/_next/static/chunks/babff0e7418ab052.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/novu-benchmark/_next/static/chunks/3ecbb78a8ff87549.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":["$","body",null,{"className":"inter_5972bc34-module__OU16Qa__className antialiased","children":["$","$L2",null,{"children":["$","$L3",null,{"defaultTheme":"dark","children":[["$","div",null,{"className":"fixed right-4 top-6 z-50 sm:top-8","children":["$","$L4",null,{}]}],["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]}]}]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[["$","div",null,{"className":"min-h-screen bg-background text-foreground font-sans selection:bg-primary/20","children":[["$","div",null,{"className":"fixed inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(#2a2a2a_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-20 dark:opacity-40"}],["$","$L7",null,{"tasksData":[{"taskName":"chat_step_slack_integration","instruction":"","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"chat_step_slack_integration__BdbDH7a","model":"gemini-3-flash","agent":"Pochi","passed":false,"reward":0,"error":false,"latency_sec":294.071,"latency_breakdown":{"env_setup":28.391,"agent_setup":34.834,"agent_exec":139.252,"verifier":72.345},"taskName":"chat_step_slack_integration","jobId":"BdbDH7a","exec_duration":139.252}]},{"taskName":"conditional_channel_routing","instruction":"","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"conditional_channel_routing__fcNzcQv","model":"gemini-3-flash","agent":"Pochi","passed":false,"reward":0,"error":false,"latency_sec":234.036,"latency_breakdown":{"env_setup":28.382,"agent_setup":35.25,"agent_exec":108.27,"verifier":44.915},"taskName":"conditional_channel_routing","jobId":"fcNzcQv","exec_duration":108.27}]},{"taskName":"count_based_digest_workflow","instruction":"","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"count_based_digest_workflow__vtnma9n","model":"gemini-3-flash","agent":"Pochi","passed":false,"reward":0,"error":false,"latency_sec":269.418,"latency_breakdown":{"env_setup":28.02,"agent_setup":34.179,"agent_exec":116.967,"verifier":73.13},"taskName":"count_based_digest_workflow","jobId":"vtnma9n","exec_duration":116.967}]},{"taskName":"custom_step_mock_crm","instruction":"","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"custom_step_mock_crm__dsfyBA3","model":"gemini-3-flash","agent":"Pochi","passed":false,"reward":0,"error":false,"latency_sec":295.609,"latency_breakdown":{"env_setup":28.35,"agent_setup":35.203,"agent_exec":169,"verifier":43.122},"taskName":"custom_step_mock_crm","jobId":"dsfyBA3","exec_duration":169}]},{"taskName":"delay_step_implementation","instruction":"","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"delay_step_implementation__Xa3Vm3v","model":"gemini-3-flash","agent":"Pochi","passed":false,"reward":0,"error":false,"latency_sec":238.59,"latency_breakdown":{"env_setup":4.693,"agent_setup":25.448,"agent_exec":120.733,"verifier":73.079},"taskName":"delay_step_implementation","jobId":"Xa3Vm3v","exec_duration":120.733}]},{"taskName":"dynamic_email_subject","instruction":"","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"dynamic_email_subject__nbYzZAJ","model":"gemini-3-flash","agent":"Pochi","passed":true,"reward":1,"error":false,"latency_sec":377.876,"latency_breakdown":{"env_setup":3.79,"agent_setup":26.806,"agent_exec":305.931,"verifier":13.212},"taskName":"dynamic_email_subject","jobId":"nbYzZAJ","exec_duration":305.931}]},{"taskName":"email_push_multi_channel","instruction":"","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"email_push_multi_channel__sjjENHe","model":"gemini-3-flash","agent":"Pochi","passed":false,"reward":0,"error":false,"latency_sec":229.57,"latency_breakdown":{"env_setup":15.575,"agent_setup":30.594,"agent_exec":123.015,"verifier":45.214},"taskName":"email_push_multi_channel","jobId":"sjjENHe","exec_duration":123.015}]},{"taskName":"express_bridge_setup","instruction":"","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"express_bridge_setup__37ZQP48","model":"gemini-3-flash","agent":"Pochi","passed":false,"reward":0,"error":false,"latency_sec":249.149,"latency_breakdown":{"env_setup":28.028,"agent_setup":34.627,"agent_exec":128.371,"verifier":42.356},"taskName":"express_bridge_setup","jobId":"37ZQP48","exec_duration":128.371}]},{"taskName":"hmac_security_express","instruction":"","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"hmac_security_express__KskZqbe","model":"gemini-3-flash","agent":"Pochi","passed":false,"reward":0,"error":false,"latency_sec":269.729,"latency_breakdown":{"env_setup":27.515,"agent_setup":29.421,"agent_exec":154.159,"verifier":42.885},"taskName":"hmac_security_express","jobId":"KskZqbe","exec_duration":154.159}]},{"taskName":"multi_tenant_workflow","instruction":"","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"multi_tenant_workflow__4npenAD","model":"gemini-3-flash","agent":"Pochi","passed":false,"reward":0,"error":false,"latency_sec":315.919,"latency_breakdown":{"env_setup":25.981,"agent_setup":29.627,"agent_exec":153.912,"verifier":74.657},"taskName":"multi_tenant_workflow","jobId":"4npenAD","exec_duration":153.912}]},{"taskName":"novu_payload_default","instruction":"","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"novu_payload_default__ATQ5m4C","model":"gemini-3-flash","agent":"Pochi","passed":false,"reward":0,"error":false,"latency_sec":123.168,"latency_breakdown":{"env_setup":4.036,"agent_setup":29.748,"agent_exec":39.342,"verifier":20.091},"taskName":"novu_payload_default","jobId":"ATQ5m4C","exec_duration":39.342}]},{"taskName":"override_provider_config","instruction":"","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"override_provider_config__LnXW39g","model":"gemini-3-flash","agent":"Pochi","passed":false,"reward":0,"error":false,"latency_sec":129.493,"latency_breakdown":{"env_setup":10.402,"agent_setup":27.634,"agent_exec":41.838,"verifier":26.269},"taskName":"override_provider_config","jobId":"LnXW39g","exec_duration":41.838}]},{"taskName":"remix_quickstart_setup","instruction":"","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"remix_quickstart_setup__9S2KFwf","model":"gemini-3-flash","agent":"Pochi","passed":false,"reward":0,"error":false,"latency_sec":236.21,"latency_breakdown":{"env_setup":22.139,"agent_setup":26.607,"agent_exec":97.658,"verifier":73.081},"taskName":"remix_quickstart_setup","jobId":"9S2KFwf","exec_duration":97.658}]},{"taskName":"sms_step_twilio_integration","instruction":"","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"sms_step_twilio_integration__trSH4Yf","model":"gemini-3-flash","agent":"Pochi","passed":true,"reward":1,"error":false,"latency_sec":425.878,"latency_breakdown":{"env_setup":23.163,"agent_setup":25.739,"agent_exec":334.246,"verifier":20.769},"taskName":"sms_step_twilio_integration","jobId":"trSH4Yf","exec_duration":334.246}]},{"taskName":"subscriber_attributes_filtering","instruction":"","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"subscriber_attributes_filtering__om3xRqU","model":"gemini-3-flash","agent":"Pochi","passed":true,"reward":1,"error":false,"latency_sec":188.581,"latency_breakdown":{"env_setup":4.513,"agent_setup":26.065,"agent_exec":123.731,"verifier":12.431},"taskName":"subscriber_attributes_filtering","jobId":"om3xRqU","exec_duration":123.731}]},{"taskName":"subscriber_preferences_config","instruction":"","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"subscriber_preferences_config__x3qBrfw","model":"gemini-3-flash","agent":"Pochi","passed":false,"reward":0,"error":false,"latency_sec":438.978,"latency_breakdown":{"env_setup":23.308,"agent_setup":25.601,"agent_exec":332.351,"verifier":42.683},"taskName":"subscriber_preferences_config","jobId":"x3qBrfw","exec_duration":332.351}]},{"taskName":"workflow_error_handling","instruction":"","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"workflow_error_handling__yNxyRMC","model":"gemini-3-flash","agent":"Pochi","passed":false,"reward":0,"error":false,"latency_sec":395.688,"latency_breakdown":{"env_setup":22.436,"agent_setup":66.002,"agent_exec":186.691,"verifier":74.008},"taskName":"workflow_error_handling","jobId":"yNxyRMC","exec_duration":186.691}]},{"taskName":"zod_schema_validation_advanced","instruction":"","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"zod_schema_validation_advanced__8CZ8SC9","model":"gemini-3-flash","agent":"Pochi","passed":false,"reward":null,"error":true,"latency_sec":62.994,"latency_breakdown":{"env_setup":10.477,"agent_setup":20.49,"agent_exec":null,"verifier":null},"taskName":"zod_schema_validation_advanced","jobId":"8CZ8SC9","exec_duration":62.994}]}]}]]}],["$L8","$L9"],"$La"]}],{},null,false,false]},null,false,false]},null,false,false],"$Lb",false]],"m":"$undefined","G":["$c",[]],"S":true}
-d:I[75049,["/novu-benchmark/_next/static/chunks/d2c13bb33c4fcd54.js","/novu-benchmark/_next/static/chunks/c21188132e0e0d48.js"],"OutletBoundary"]
-e:"$Sreact.suspense"
-10:I[75049,["/novu-benchmark/_next/static/chunks/d2c13bb33c4fcd54.js","/novu-benchmark/_next/static/chunks/c21188132e0e0d48.js"],"ViewportBoundary"]
-12:I[75049,["/novu-benchmark/_next/static/chunks/d2c13bb33c4fcd54.js","/novu-benchmark/_next/static/chunks/c21188132e0e0d48.js"],"MetadataBoundary"]
-8:["$","script","script-0",{"src":"/novu-benchmark/_next/static/chunks/25c3d9739926ecd6.js","async":true,"nonce":"$undefined"}]
-9:["$","script","script-1",{"src":"/novu-benchmark/_next/static/chunks/be08138953094657.js","async":true,"nonce":"$undefined"}]
-a:["$","$Ld",null,{"children":["$","$e",null,{"name":"Next.MetadataOutlet","children":"$@f"}]}]
-b:["$","$1","h",{"children":[null,["$","$L10",null,{"children":"$L11"}],["$","div",null,{"hidden":true,"children":["$","$L12",null,{"children":["$","$e",null,{"name":"Next.Metadata","children":"$L13"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
-11:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
-f:null
-13:[["$","title","0",{"children":"Novu Benchmark"}],["$","meta","1",{"name":"description","content":"Performance results of AI coding models on Novu tasks, measuring success rate and execution time with high precision."}]]
+8:T4e0,# Novu Chat Step Slack Integration
+
+## Background
+Create an Express.js application that serves a Novu Bridge Endpoint containing a workflow. The workflow should use the Chat step to send a notification, specifically simulating a Slack integration.
+
+## Requirements
+- Initialize a Node.js project in `/home/user/myproject`.
+- Install `express` and `@novu/framework`.
+- Create a workflow named `slack-notification`.
+- The workflow must contain a chat step with the ID `send-to-slack`.
+- The chat step must return a `body` with the text `"Hello from Novu!"`.
+- Configure an Express server to serve the Novu endpoint at `/api/novu`.
+- The Express server must listen on port 3000.
+
+## Implementation Guide
+1. Run `npm init -y` in `/home/user/myproject`.
+2. Install the required packages: `npm install express @novu/framework`.
+3. Create a `novu/workflows.js` file and define the `slack-notification` workflow using `@novu/framework`.
+4. Create an `index.js` file to set up the Express server and serve the workflow at `/api/novu` using `serve` from `@novu/framework/express`.
+
+## Constraints
+- Project path: `/home/user/myproject`
+- Start command: `node index.js`
+- Port: 3000
+- The workflow must be exported so it can be served.
+
+## Integrations
+- None9:T5bd,# Novu Conditional Channel Routing
+
+## Background
+Novu is an open-source notification infrastructure platform. The Novu Framework allows developers to define notification workflows in code. In many cases, you want to conditionally send notifications across certain channels based on the payload data (e.g., only send an email if the notification is marked as critical).
+
+## Requirements
+- Initialize a Node.js Express application in `/home/user/project`.
+- Install `express`, `@novu/framework`, and `zod`.
+- Create a Novu Bridge Endpoint at `/api/novu` using `@novu/framework/express`.
+- Define a workflow named `conditional-routing`.
+- The workflow must accept a payload validated by Zod with `userName` (string) and `critical` (boolean).
+- The workflow must contain two steps:
+  1. An `inApp` step named `notify-in-app` that always runs.
+  2. An `email` step named `send-email` that is skipped if `payload.critical` is false.
+
+## Implementation Guide
+1. Initialize a Node project in `/home/user/project`.
+2. Install required dependencies.
+3. Create an `index.js` file.
+4. Define the workflow using `@novu/framework`.
+5. Use the `skip` option in the `email` step to evaluate `payload.critical`.
+6. Expose the workflow via an Express route `/api/novu` using `serve` from `@novu/framework/express`.
+7. Start the server on port 3000.
+
+## Constraints
+- Project path: `/home/user/project`
+- Start command: `node index.js`
+- Port: 3000
+- The server must listen on port 3000.a:T64d,# Novu Digest Workflow
+
+## Background
+You need to create a notification workflow using `@novu/framework` that aggregates multiple events using a digest step before sending an email. Although the task is named `count_based_digest_workflow`, `@novu/framework` currently primarily supports time-based digests (e.g., batching for a certain time duration) and cron-based digests. You will implement a time-based digest that batches events for 5 minutes.
+
+## Requirements
+- Initialize a Node.js project in `/home/user/novu-app`.
+- Install `@novu/framework` and `express`.
+- Create a workflow named `digest-workflow`.
+- The workflow should have a digest step named `digest-events` that batches events for 5 minutes.
+- After the digest step, add an email step named `send-email` that sends a summary email containing the number of digested events.
+- Serve the workflow using an Express server on port 3000 at the `/api/novu` endpoint.
+
+## Implementation Guide
+1. `mkdir -p /home/user/novu-app` and `cd /home/user/novu-app`.
+2. `npm init -y` and `npm install @novu/framework express`.
+3. Create `index.js`.
+4. In `index.js`, define the workflow using `workflow` from `@novu/framework`.
+5. Use `step.digest` to wait for 5 minutes (`amount: 5, unit: 'minutes'`).
+6. Use `step.email` to send an email with the subject `Digest Summary` and body `You have ${events.length} new events`.
+7. Use `serve` from `@novu/framework/express` to mount the workflow on an Express app at `/api/novu`.
+8. Start the Express server on port 3000.
+
+## Constraints
+- Project path: /home/user/novu-app
+- Start command: `node index.js`
+- Port: 3000b:T822,# Novu Custom Step with Mock CRM
+
+## Background
+You have an Express.js application that serves as both a mock CRM and a Novu Bridge. Novu provides a `step.custom` feature that allows workflows to fetch external data and use it in subsequent steps. Your task is to implement a Novu workflow that uses `step.custom` to fetch user details from a mock CRM API and then sends an email notification using that data.
+
+## Requirements
+1. Initialize an Express.js project in `/home/user/app`.
+2. Install `@novu/framework`, `@novu/node`, `express`, and `zod`.
+3. Create an Express server in `/home/user/app/index.js` running on port 3000.
+4. Create a mock CRM endpoint `GET /api/crm/users/:id` that returns a JSON object `{ "name": "Alice", "company": "Acme Corp" }` for any ID.
+5. Define a Novu workflow named `crm-notification` with a payload schema requiring `userId` (string).
+6. In the workflow, add a `step.custom` named `fetch-crm-data` that makes an HTTP GET request (e.g., using `fetch`) to `http://localhost:3000/api/crm/users/${payload.userId}` and returns the JSON response. Define the `outputSchema` for the custom step to expect `name` and `company` as strings.
+7. Add a `step.email` named `send-email` that uses the data returned from the custom step. The email subject should be `"Welcome to ${company}!"` and the body should be `"Hello ${name}, welcome to ${company}."`.
+8. Serve the Novu workflow at `/api/novu` using the Express adapter from `@novu/framework/express`.
+
+## Implementation Guide
+1. Run `npm init -y` and `npm install express @novu/framework @novu/node zod`.
+2. In `index.js`, use `express.json()` middleware.
+3. Implement the `GET /api/crm/users/:id` route.
+4. Implement the Novu workflow using `workflow`, `step.custom`, and `step.email`.
+5. Use `serve` from `@novu/framework/express` to mount the workflow at `/api/novu`.
+6. Start the server with `node index.js`.
+
+## Constraints
+- Project path: `/home/user/app`
+- Start command: `node index.js`
+- Port: 3000
+- The custom step must make a real HTTP request to the mock CRM endpoint.
+
+## Integrations
+- Nonec:T6e8,# Implement a Delay Step in Novu Workflow
+
+## Background
+You are building a notification system using the Novu Framework with an Express.js backend. You need to implement a workflow that delays a follow-up notification by a specific duration (e.g., 24 hours) after an initial trigger.
+
+## Requirements
+- Initialize an Express.js application.
+- Install `@novu/framework` and `express`.
+- Create a Novu workflow named `follow-up-workflow`.
+- The workflow must include a delay step (named `reminder-delay`) configured to pause execution for 24 hours.
+- Following the delay, it must include an email step (named `follow-up-email`) with the subject `How are you liking our product?`.
+- Expose the Novu Bridge Endpoint at `/api/novu` in the Express app.
+
+## Implementation Guide
+1. Initialize a Node.js project in `/home/user/myproject`.
+2. Install `express` and `@novu/framework`.
+3. Create a file `workflows.js` (or `.ts` if using TypeScript) to define your `follow-up-workflow` using `workflow` and `step` from `@novu/framework`.
+4. In the workflow definition, use `await step.delay('reminder-delay', async () => ({ amount: 24, unit: 'hours' }))`.
+5. Next, use `await step.email('follow-up-email', async () => ({ subject: 'How are you liking our product?', body: 'Just checking in!' }))`.
+6. Create an `index.js` file that sets up an Express app. Import the workflow and use the `serve` function from `@novu/framework/express` to mount it on `/api/novu`.
+7. Start the Express server on port 3000.
+
+## Constraints
+- Project path: `/home/user/myproject`
+- Start command: `node index.js`
+- Port: 3000
+- The workflow must be named `follow-up-workflow`.
+- The delay step must be named `reminder-delay`.
+- The email step must be named `follow-up-email`.
+
+## Integrations
+- Noned:T584,# Dynamic Email Subject with Novu Framework
+
+## Background
+Novu is an open-source notification infrastructure platform. You can define workflows using code. In this task, you will create a simple workflow that dynamically sets the subject of an email notification based on the payload.
+
+## Requirements
+- Initialize a Node.js project in `/home/user/novu-project`.
+- Install `@novu/framework`, `zod`, `express`, and `typescript`.
+- Create a file `workflow.ts` that defines and exports a workflow named `dynamic-email`.
+- The workflow should expect a payload with `orderId` (string) and `customerName` (string), validated using Zod.
+- It must have an email step named `send-email`.
+- The email subject must be dynamically generated as: `Order <orderId> confirmed for <customerName>`.
+- The email body can be any string (e.g., "Hello").
+- Create an `index.ts` that sets up an Express server and uses `serve` from `@novu/framework/express` to expose the workflow at `/api/novu`.
+- The server should listen on port 3000.
+
+## Implementation Guide
+1. Create `/home/user/novu-project` and run `npm init -y`.
+2. Install the necessary packages: `npm install @novu/framework zod express typescript @types/express tsx`.
+3. Create `workflow.ts` with the workflow definition.
+4. Create `index.ts` to serve the workflow.
+
+## Constraints
+- Project path: `/home/user/novu-project`
+- Start command: `npx tsx index.ts`
+- Port: 3000e:T6bf,# Novu Express Bridge Setup
+
+## Background
+Set up a Novu Bridge Endpoint in an Express.js application to connect your code to Novu Cloud.
+
+## Requirements
+- Initialize a Node.js project in `/home/user/myproject`.
+- Install `express` and `@novu/framework`.
+- Create a workflow file `workflows.js` that defines a workflow named `test-workflow` which sends an email with the subject 'Test Email' and body 'This is a test email from Novu Framework!'.
+- Create an `index.js` file that sets up an Express server on port 3000.
+- Configure the server to parse JSON (`express.json()`) and mount the Novu Bridge Endpoint at `/api/novu` using the `serve` function from `@novu/framework/express`, passing the `test-workflow`.
+
+## Implementation Guide
+1. Run `npm init -y` in `/home/user/myproject`.
+2. Run `npm install express @novu/framework`.
+3. Create `workflows.js`:
+```javascript
+const { workflow } = require('@novu/framework');
+
+const testWorkflow = workflow('test-workflow', async ({ step }) => {
+  await step.email('test-email', async () => {
+    return {
+      subject: 'Test Email',
+      body: 'This is a test email from Novu Framework!',
+    };
+  });
+});
+
+module.exports = { testWorkflow };
+```
+4. Create `index.js`:
+```javascript
+const express = require('express');
+const { serve } = require('@novu/framework/express');
+const { testWorkflow } = require('./workflows');
+
+const app = express();
+app.use(express.json());
+app.use('/api/novu', serve({ workflows: [testWorkflow] }));
+
+app.listen(3000, () => console.log('Listening on port 3000'));
+```
+
+## Constraints
+- Project path: `/home/user/myproject`
+- Start command: `node index.js`
+- Port: 3000
+- Do not use TypeScript, use plain JavaScript (CommonJS) as shown in the guide.f:T4ef,# Secure Novu Bridge Endpoint in Express.js
+
+## Background
+Novu Framework allows you to define workflows in your code and expose them via a Bridge Endpoint. In production, this endpoint must be secured using HMAC verification to ensure only Novu Cloud can trigger your workflows.
+
+## Requirements
+- Initialize a Node.js Express application.
+- Create a Novu workflow named `test-workflow` that sends an email.
+- Expose this workflow via a Novu Bridge Endpoint at `/api/novu`.
+- Configure the application to run in production mode (`NODE_ENV=production`) so that HMAC verification is enforced by default.
+- Use `NOVU_SECRET_KEY` from the environment for HMAC verification.
+
+## Implementation Guide
+1. Initialize a new Node.js project in `/home/user/app`.
+2. Install `express` and `@novu/framework`.
+3. Create `index.js` that sets up an Express server listening on port 3000.
+4. Define a workflow using `@novu/framework` and expose it at `/api/novu` using the `serve` function from `@novu/framework/express`.
+5. Start the server using the command `npm start` which should execute `NODE_ENV=production node index.js`.
+
+## Constraints
+- Project path: /home/user/app
+- Start command: npm start
+- Port: 3000
+- The server must read `NOVU_SECRET_KEY` from the environment.10:T482,# Multi-Tenant Novu Workflow
+
+## Background
+Novu allows you to handle notifications for different tenants (organizations) within a single SaaS app. Create an Express.js application with a Novu Bridge endpoint that defines a multi-tenant workflow.
+
+## Requirements
+- Create a Novu workflow named `multi-tenant-workflow`.
+- The workflow should send an email step.
+- The email subject should be `Update from ${payload.tenantName}`.
+- The email body should be `Hello ${payload.userName}, this is an update for your organization.`.
+- The payload schema must validate `tenantName` and `userName` as strings using Zod.
+- Serve the workflow via an Express endpoint at `/api/novu`.
+
+## Implementation Guide
+1. Initialize a Node.js project in `/home/user/myproject`.
+2. Install `@novu/framework`, `express`, and `zod`.
+3. Create an `index.js` that sets up the Express server.
+4. Define the workflow using `@novu/framework`.
+5. Use the `serve` function from `@novu/framework/express` to create the bridge endpoint at `/api/novu`.
+6. Start the server on port 3000.
+
+## Constraints
+- Project path: `/home/user/myproject`
+- Start command: `node index.js`
+- Port: 3000
+11:T4f6,# Novu Payload Default Values
+
+## Background
+Novu allows you to define payload schemas for your workflows using Zod. You can specify default values for fields in the payload schema, which are used if the trigger does not provide them.
+
+## Requirements
+- You have a Node.js project initialized in `/home/user/project`.
+- Create a file `src/novu/workflows.ts` that exports a Novu workflow named `welcome-user`.
+- The workflow must have a payload schema defined using `zod`.
+- The schema must have a field `userName` of type string with a default value of `'Guest'`.
+- The workflow should contain an email step named `send-email` that uses `payload.userName` in its subject.
+
+## Implementation Guide
+1. Navigate to `/home/user/project`.
+2. Create the file `src/novu/workflows.ts`.
+3. Import `workflow` from `@novu/framework` and `z` from `zod`.
+4. Define and export the `welcomeUser` workflow.
+5. In the workflow options, define `payloadSchema` with `z.object({ userName: z.string().default('Guest') })`.
+6. Add an `email` step to the workflow that sets the subject to something like `Welcome, ${payload.userName}!`.
+
+## Constraints
+- Project path: /home/user/project
+- The workflow ID must be `welcome-user`.
+- The exported workflow variable should be named `welcomeUser`.12:T73e,# Novu Workflow with Dynamic Provider Override
+
+## Background
+You have a Next.js project with a Novu endpoint initialized at `/home/user/app`.
+You need to implement a complex workflow that fetches a user's notification preferences from an external API and dynamically overrides the email provider configuration based on those preferences.
+
+## Requirements
+1. In `/home/user/app/app/api/novu/workflows.ts`, create and export a workflow named `dynamic-provider`.
+2. The workflow must have a payload schema defined as `z.object({ orderId: z.string() })`.
+3. The workflow must consist of two steps:
+   - A custom step named `fetch-config` that makes an HTTP GET request to `http://localhost:4000/config?userId=${subscriber.subscriberId}` and returns the parsed JSON response.
+   - An email step named `send-email`.
+4. The external API returns a JSON object with this shape:
+   ```ts
+   {
+     provider: 'sendgrid' | 'mailgun' | 'none',
+     templateId: string,
+     data: Record<string, any>
+   }
+   ```
+5. The email step must be configured as follows:
+   - `subject`: `"Order <orderId>"` (e.g., "Order ord_123")
+   - `body`: `"Your order is processing."`
+   - `providers`: Dynamically overridden based on the output of the `fetch-config` step.
+     - If `provider` is `'sendgrid'`, override the `sendgrid` config with `templateId` and `dynamicTemplateData` (set to the `data` object).
+     - If `provider` is `'mailgun'`, override the `mailgun` config with `template` (set to `templateId`) and `'h:X-Mailgun-Variables'` (set to `JSON.stringify(data)`).
+     - If `provider` is `'none'` or missing, do not return any `providers` override.
+
+## Constraints
+- Project path: `/home/user/app`
+- Start command: `npm run dev`
+- Port: 3000
+- You must use `@novu/framework` and `zod`.
+- Do not use any external libraries for fetching data, use the native `fetch` API.13:T42e,# Setup Novu Framework in a Remix Application
+
+## Background
+You have a basic Remix application. You need to integrate the Novu Framework to handle notifications by adding a Novu API endpoint and a test workflow.
+
+## Requirements
+- Install `@novu/framework` in the Remix application.
+- Create a Novu workflow definition in `app/novu/workflows.ts` that defines a `test-workflow` with an email step.
+- Create a Remix route at `app/routes/api.novu.ts` (which maps to `/api/novu`) that serves the Novu endpoint using the `test-workflow`.
+- Add `NOVU_SECRET_KEY=your_secret_key` to a `.env` file in the project root.
+
+## Implementation Guide
+1. Navigate to `/home/user/my-novu-app`.
+2. Install `@novu/framework` using npm.
+3. Create `app/novu/workflows.ts` with a basic workflow named `test-workflow`.
+4. Create `app/routes/api.novu.ts` and use `serve` from `@novu/framework/remix` to export `action` and `loader`.
+5. Create a `.env` file with `NOVU_SECRET_KEY=your_secret_key`.
+
+## Constraints
+- Project path: /home/user/my-novu-app
+- Start command: npm run dev
+- Port: 517314:T4c2,# Novu SMS Workflow Integration
+
+## Background
+Create a Novu workflow that sends an SMS notification. You will use the `@novu/framework` to define the workflow in a Next.js application.
+
+## Requirements
+- Initialize a basic Next.js project.
+- Install `@novu/framework`.
+- Create a Novu workflow named `sms-alert`.
+- The workflow must include an SMS step named `send-sms`.
+- The workflow payload must be validated using `zod` and accept a `message` string.
+- The SMS body should be the `message` from the payload.
+- Expose the workflow via a Bridge Endpoint at `/api/novu`.
+
+## Implementation Guide
+1. Create a Next.js app in `/home/user/novu-app` using `npx create-next-app@latest novu-app --typescript --eslint --tailwind --no-src-dir --app --import-alias "@/*"`.
+2. Install `@novu/framework` and `zod`: `npm install @novu/framework zod`.
+3. Create a file `app/api/novu/workflows.ts` and define the `smsAlert` workflow using `step.sms`.
+4. Create the Bridge Endpoint in `app/api/novu/route.ts` using `serve` from `@novu/framework/next` and export `GET`, `POST`, `OPTIONS`.
+
+## Constraints
+- Project path: `/home/user/novu-app`
+- Start command: `npm run dev`
+- Port: 3000
+- The workflow must be exported as `smsAlert`.15:T4f8,# Novu Workflow with Conditional Skip
+
+## Background
+Using the `@novu/framework`, create a workflow that selectively sends notifications based on the payload attributes. This simulates sending a premium SMS only to premium subscribers.
+
+## Requirements
+- Initialize a Node.js project in `/home/user/novu-project`.
+- Install `@novu/framework` and `zod`.
+- Create an `index.ts` file that exports a workflow named `premiumNotification`.
+- The workflow must have the ID `premium-notification`.
+- Define a payload schema using `zod` with an `isPremium` boolean property (default `false`).
+- The workflow should have an `inApp` step (stepId: `notify-in-app`) that always runs.
+- The workflow should have an `sms` step (stepId: `notify-sms`) that sends an SMS with the body "Premium features unlocked!".
+- The `sms` step must use the `skip` function to skip execution if `payload.isPremium` is `false`.
+
+## Implementation Guide
+1. `mkdir -p /home/user/novu-project && cd /home/user/novu-project`
+2. Initialize a new project with `npm init -y`.
+3. Install dependencies: `npm install @novu/framework zod typescript @types/node`.
+4. Create `index.ts` and implement the workflow as described.
+
+## Constraints
+- Project path: `/home/user/novu-project`
+- Use TypeScript for `index.ts`.16:T757,# Configure Workflow Subscriber Preferences in Novu
+
+## Background
+Novu's Code-First Framework allows developers to define workflow channel preferences directly in code. This is useful for setting default delivery preferences (e.g., enabling In-App notifications while disabling Emails by default) and controlling whether subscribers can override these settings.
+
+## Requirements
+- Initialize a Next.js App Router project.
+- Install `@novu/framework` and `zod`.
+- Create a workflow with the ID `subscriber-preferences` and name `Subscriber Preferences`.
+- The workflow should have two steps: `inApp` and `email`.
+- Configure the workflow's payload schema using Zod to expect a `userName` string.
+- Set the `inApp` step body to: `Hello ${payload.userName}, this is an in-app message.`
+- Set the `email` step subject to `Preferences Test` and body to: `Hello ${payload.userName}, this is an email message.`
+- Configure the workflow preferences so that `inApp` is enabled by default, `email` is disabled by default, and the preferences are NOT read-only (subscribers can change them).
+- Expose the workflow via a Novu Bridge Endpoint at `/api/novu`.
+
+## Implementation Guide
+1. Create a Next.js app in `/home/user/myproject` using `npx create-next-app@latest myproject --typescript --tailwind --eslint --app --src-dir --import-alias "@/*" --use-npm`.
+2. Install dependencies: `npm install @novu/framework zod` inside the project.
+3. Create the workflow file at `src/novu/workflows.ts`.
+4. Define the workflow using the `workflow` function from `@novu/framework`.
+5. Use the `preferences` option in the workflow configuration to set the channel preferences.
+6. Create the API route at `src/app/api/novu/route.ts` using `serve` from `@novu/framework/next` and pass the workflow to it.
+
+## Constraints
+- Project path: `/home/user/myproject`
+- Start command: `npm run dev`
+- Port: 3000
+17:T5cd,# Novu Workflow Error Handling
+
+## Background
+Novu provides a code-first framework for defining notification workflows. It supports payload validation using Zod and allows you to write custom code in custom steps. This task focuses on implementing a workflow that validates its payload and correctly surfaces errors from custom steps.
+
+## Requirements
+- Create an Express.js application that serves a Novu Bridge endpoint.
+- Define a Novu workflow named `error-handling-workflow`.
+- The workflow must use a Zod schema for payload validation, requiring `userId` (string) and `simulateError` (boolean, defaults to false).
+- Implement a custom step named `fetch-data`. If `payload.simulateError` is true, the step must throw an `Error` with the message `"External API Failed"`. If false, it returns `{ status: "ok" }`.
+- Implement an `email` step named `send-email` that sends an email with the subject `"Process Complete"` and a body containing the status from the custom step.
+
+## Implementation Guide
+1. Initialize a Node.js project in `/home/user/novu-app`.
+2. Install `express`, `@novu/framework`, and `zod`.
+3. Create `index.js`.
+4. Define the workflow using the `@novu/framework` `workflow` function.
+5. Set up an Express server and mount the Novu Bridge using the `serve` function from `@novu/framework/express` at the `/api/novu` route.
+6. Ensure the server listens on port 3000.
+
+## Constraints
+- Project path: `/home/user/novu-app`
+- Start command: `node index.js`
+- Port: 300018:T475,# Novu Workflow with Zod Validation
+
+## Background
+Create a multi-channel Novu workflow that sends an email and an in-app notification, using Zod to validate the payload.
+
+## Requirements
+- Initialize a Node.js project in `/home/user/myproject` with Express.
+- Install `@novu/framework`, `express`, and `zod`.
+- Create a file `novu/workflows.js` that exports a workflow named `welcome-user`.
+- The workflow should have an `inApp` step named `notify-in-app` and an `email` step named `send-email`.
+- Use Zod to define a `payloadSchema` that requires a `userName` (string, default: 'New User') and an optional `age` (number).
+- Create `index.js` that sets up an Express server on port 3000 and exposes the Novu Bridge Endpoint at `/api/novu` serving the `welcome-user` workflow.
+
+## Implementation Guide
+1. `mkdir -p /home/user/myproject && cd /home/user/myproject`
+2. `npm init -y`
+3. `npm install express @novu/framework zod`
+4. Write `novu/workflows.js` using `@novu/framework` and `zod`.
+5. Write `index.js` using `@novu/framework/express`.
+
+## Constraints
+- Project path: /home/user/myproject
+- Start command: `node index.js`
+- Port: 30000:{"P":null,"b":"NnhU52bMivbiyn81vx7_0","c":["","tasks",""],"q":"","i":false,"f":[[["",{"children":["tasks",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/novu-benchmark/_next/static/chunks/aae6fc4800eaf3c2.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/novu-benchmark/_next/static/chunks/babff0e7418ab052.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/novu-benchmark/_next/static/chunks/3ecbb78a8ff87549.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":["$","body",null,{"className":"inter_5972bc34-module__OU16Qa__className antialiased","children":["$","$L2",null,{"children":["$","$L3",null,{"defaultTheme":"dark","children":[["$","div",null,{"className":"fixed right-4 top-6 z-50 sm:top-8","children":["$","$L4",null,{}]}],["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]}]}]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[["$","div",null,{"className":"min-h-screen bg-background text-foreground font-sans selection:bg-primary/20","children":[["$","div",null,{"className":"fixed inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(#2a2a2a_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-20 dark:opacity-40"}],["$","$L7",null,{"tasksData":[{"taskName":"chat_step_slack_integration","instruction":"$8","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"chat_step_slack_integration__BdbDH7a","model":"gemini-3-flash","agent":"Pochi","passed":false,"reward":0,"error":false,"latency_sec":294.071,"latency_breakdown":{"env_setup":28.391,"agent_setup":34.834,"agent_exec":139.252,"verifier":72.345},"taskName":"chat_step_slack_integration","jobId":"BdbDH7a","exec_duration":139.252}]},{"taskName":"conditional_channel_routing","instruction":"$9","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"conditional_channel_routing__fcNzcQv","model":"gemini-3-flash","agent":"Pochi","passed":false,"reward":0,"error":false,"latency_sec":234.036,"latency_breakdown":{"env_setup":28.382,"agent_setup":35.25,"agent_exec":108.27,"verifier":44.915},"taskName":"conditional_channel_routing","jobId":"fcNzcQv","exec_duration":108.27}]},{"taskName":"count_based_digest_workflow","instruction":"$a","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"count_based_digest_workflow__vtnma9n","model":"gemini-3-flash","agent":"Pochi","passed":false,"reward":0,"error":false,"latency_sec":269.418,"latency_breakdown":{"env_setup":28.02,"agent_setup":34.179,"agent_exec":116.967,"verifier":73.13},"taskName":"count_based_digest_workflow","jobId":"vtnma9n","exec_duration":116.967}]},{"taskName":"custom_step_mock_crm","instruction":"$b","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"custom_step_mock_crm__dsfyBA3","model":"gemini-3-flash","agent":"Pochi","passed":false,"reward":0,"error":false,"latency_sec":295.609,"latency_breakdown":{"env_setup":28.35,"agent_setup":35.203,"agent_exec":169,"verifier":43.122},"taskName":"custom_step_mock_crm","jobId":"dsfyBA3","exec_duration":169}]},{"taskName":"delay_step_implementation","instruction":"$c","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"delay_step_implementation__Xa3Vm3v","model":"gemini-3-flash","agent":"Pochi","passed":false,"reward":0,"error":false,"latency_sec":238.59,"latency_breakdown":{"env_setup":4.693,"agent_setup":25.448,"agent_exec":120.733,"verifier":73.079},"taskName":"delay_step_implementation","jobId":"Xa3Vm3v","exec_duration":120.733}]},{"taskName":"dynamic_email_subject","instruction":"$d","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"dynamic_email_subject__nbYzZAJ","model":"gemini-3-flash","agent":"Pochi","passed":true,"reward":1,"error":false,"latency_sec":377.876,"latency_breakdown":{"env_setup":3.79,"agent_setup":26.806,"agent_exec":305.931,"verifier":13.212},"taskName":"dynamic_email_subject","jobId":"nbYzZAJ","exec_duration":305.931}]},{"taskName":"email_push_multi_channel","instruction":"# Multi-Channel Novu Workflow with Express\n\n## Background\nNovu provides a code-first framework to define notification workflows. You need to create a simple Express application that serves a Novu workflow with multiple channels (in-app and email).\n\n## Requirements\n- Initialize an Express application in `/home/user/novu-app`.\n- Install `express` and `@novu/framework`.\n- Create an `index.js` file that sets up an Express server.\n- Define a workflow named `welcome-user` using `workflow` from `@novu/framework`.\n- The workflow must include an `inApp` step named `notify-in-app` and an `email` step named `send-email`.\n- Serve the workflow at the `/api/novu` endpoint using `serve` from `@novu/framework/express`.\n- The server should listen on port 3000.\n\n## Constraints\n- Project path: `/home/user/novu-app`\n- Start command: `node index.js`\n- Port: 3000\n- Ensure `express.json()` middleware is used before the Novu endpoint.","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"email_push_multi_channel__sjjENHe","model":"gemini-3-flash","agent":"Pochi","passed":false,"reward":0,"error":false,"latency_sec":229.57,"latency_breakdown":{"env_setup":15.575,"agent_setup":30.594,"agent_exec":123.015,"verifier":45.214},"taskName":"email_push_multi_channel","jobId":"sjjENHe","exec_duration":123.015}]},{"taskName":"express_bridge_setup","instruction":"$e","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"express_bridge_setup__37ZQP48","model":"gemini-3-flash","agent":"Pochi","passed":false,"reward":0,"error":false,"latency_sec":249.149,"latency_breakdown":{"env_setup":28.028,"agent_setup":34.627,"agent_exec":128.371,"verifier":42.356},"taskName":"express_bridge_setup","jobId":"37ZQP48","exec_duration":128.371}]},{"taskName":"hmac_security_express","instruction":"$f","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"hmac_security_express__KskZqbe","model":"gemini-3-flash","agent":"Pochi","passed":false,"reward":0,"error":false,"latency_sec":269.729,"latency_breakdown":{"env_setup":27.515,"agent_setup":29.421,"agent_exec":154.159,"verifier":42.885},"taskName":"hmac_security_express","jobId":"KskZqbe","exec_duration":154.159}]},{"taskName":"multi_tenant_workflow","instruction":"$10","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"multi_tenant_workflow__4npenAD","model":"gemini-3-flash","agent":"Pochi","passed":false,"reward":0,"error":false,"latency_sec":315.919,"latency_breakdown":{"env_setup":25.981,"agent_setup":29.627,"agent_exec":153.912,"verifier":74.657},"taskName":"multi_tenant_workflow","jobId":"4npenAD","exec_duration":153.912}]},{"taskName":"novu_payload_default","instruction":"$11","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"novu_payload_default__ATQ5m4C","model":"gemini-3-flash","agent":"Pochi","passed":false,"reward":0,"error":false,"latency_sec":123.168,"latency_breakdown":{"env_setup":4.036,"agent_setup":29.748,"agent_exec":39.342,"verifier":20.091},"taskName":"novu_payload_default","jobId":"ATQ5m4C","exec_duration":39.342}]},{"taskName":"override_provider_config","instruction":"$12","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"override_provider_config__LnXW39g","model":"gemini-3-flash","agent":"Pochi","passed":false,"reward":0,"error":false,"latency_sec":129.493,"latency_breakdown":{"env_setup":10.402,"agent_setup":27.634,"agent_exec":41.838,"verifier":26.269},"taskName":"override_provider_config","jobId":"LnXW39g","exec_duration":41.838}]},{"taskName":"remix_quickstart_setup","instruction":"$13","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"remix_quickstart_setup__9S2KFwf","model":"gemini-3-flash","agent":"Pochi","passed":false,"reward":0,"error":false,"latency_sec":236.21,"latency_breakdown":{"env_setup":22.139,"agent_setup":26.607,"agent_exec":97.658,"verifier":73.081},"taskName":"remix_quickstart_setup","jobId":"9S2KFwf","exec_duration":97.658}]},{"taskName":"sms_step_twilio_integration","instruction":"$14","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"sms_step_twilio_integration__trSH4Yf","model":"gemini-3-flash","agent":"Pochi","passed":true,"reward":1,"error":false,"latency_sec":425.878,"latency_breakdown":{"env_setup":23.163,"agent_setup":25.739,"agent_exec":334.246,"verifier":20.769},"taskName":"sms_step_twilio_integration","jobId":"trSH4Yf","exec_duration":334.246}]},{"taskName":"subscriber_attributes_filtering","instruction":"$15","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"subscriber_attributes_filtering__om3xRqU","model":"gemini-3-flash","agent":"Pochi","passed":true,"reward":1,"error":false,"latency_sec":188.581,"latency_breakdown":{"env_setup":4.513,"agent_setup":26.065,"agent_exec":123.731,"verifier":12.431},"taskName":"subscriber_attributes_filtering","jobId":"om3xRqU","exec_duration":123.731}]},{"taskName":"subscriber_preferences_config","instruction":"$16","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"subscriber_preferences_config__x3qBrfw","model":"gemini-3-flash","agent":"Pochi","passed":false,"reward":0,"error":false,"latency_sec":438.978,"latency_breakdown":{"env_setup":23.308,"agent_setup":25.601,"agent_exec":332.351,"verifier":42.683},"taskName":"subscriber_preferences_config","jobId":"x3qBrfw","exec_duration":332.351}]},{"taskName":"workflow_error_handling","instruction":"$17","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"workflow_error_handling__yNxyRMC","model":"gemini-3-flash","agent":"Pochi","passed":false,"reward":0,"error":false,"latency_sec":395.688,"latency_breakdown":{"env_setup":22.436,"agent_setup":66.002,"agent_exec":186.691,"verifier":74.008},"taskName":"workflow_error_handling","jobId":"yNxyRMC","exec_duration":186.691}]},{"taskName":"zod_schema_validation_advanced","instruction":"$18","trials":[{"job_name":"2026-05-06__00-37-39","trial_name":"zod_schema_validation_advanced__8CZ8SC9","model":"gemini-3-flash","agent":"Pochi","passed":false,"reward":null,"error":true,"latency_sec":62.994,"latency_breakdown":{"env_setup":10.477,"agent_setup":20.49,"agent_exec":null,"verifier":null},"taskName":"zod_schema_validation_advanced","jobId":"8CZ8SC9","exec_duration":62.994}]}]}]]}],["$L19","$L1a"],"$L1b"]}],{},null,false,false]},null,false,false]},null,false,false],"$L1c",false]],"m":"$undefined","G":["$1d",[]],"S":true}
+1e:I[75049,["/novu-benchmark/_next/static/chunks/d2c13bb33c4fcd54.js","/novu-benchmark/_next/static/chunks/c21188132e0e0d48.js"],"OutletBoundary"]
+1f:"$Sreact.suspense"
+21:I[75049,["/novu-benchmark/_next/static/chunks/d2c13bb33c4fcd54.js","/novu-benchmark/_next/static/chunks/c21188132e0e0d48.js"],"ViewportBoundary"]
+23:I[75049,["/novu-benchmark/_next/static/chunks/d2c13bb33c4fcd54.js","/novu-benchmark/_next/static/chunks/c21188132e0e0d48.js"],"MetadataBoundary"]
+19:["$","script","script-0",{"src":"/novu-benchmark/_next/static/chunks/25c3d9739926ecd6.js","async":true,"nonce":"$undefined"}]
+1a:["$","script","script-1",{"src":"/novu-benchmark/_next/static/chunks/be08138953094657.js","async":true,"nonce":"$undefined"}]
+1b:["$","$L1e",null,{"children":["$","$1f",null,{"name":"Next.MetadataOutlet","children":"$@20"}]}]
+1c:["$","$1","h",{"children":[null,["$","$L21",null,{"children":"$L22"}],["$","div",null,{"hidden":true,"children":["$","$L23",null,{"children":["$","$1f",null,{"name":"Next.Metadata","children":"$L24"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+22:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+20:null
+24:[["$","title","0",{"children":"Novu Benchmark"}],["$","meta","1",{"name":"description","content":"Performance results of AI coding models on Novu tasks, measuring success rate and execution time with high precision."}]]
