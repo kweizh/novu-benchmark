@@ -1,5 +1,0 @@
-[environment]
-image = "node:20-bullseye"
-
-[verifier]
-dependencies = ["requests"]
