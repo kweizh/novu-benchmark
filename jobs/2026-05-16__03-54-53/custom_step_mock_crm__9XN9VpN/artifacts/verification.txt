@@ -1,0 +1,27 @@
+Novu Custom Step with Mock CRM — Verification Results
+======================================================
+
+1. Mock CRM Endpoint
+   GET http://localhost:3000/api/crm/users/42
+   Response: {"name":"Alice","company":"Acme Corp"}
+   STATUS: ✅ PASS
+
+2. Novu Bridge Health Check
+   GET http://localhost:3000/api/novu/health-check
+   Response: {"status":"ok","sdkVersion":"2.10.0","frameworkVersion":"2024-06-26","discovered":{"workflows":1,"steps":2}}
+   STATUS: ✅ PASS
+
+3. Workflow Discovery
+   Workflow ID: crm-notification
+   Steps:
+     - fetch-crm-data  (type: custom)
+     - send-email      (type: email)
+   STATUS: ✅ PASS
+
+Server logs on startup:
+  Server running on http://localhost:3000
+  Mock CRM endpoint: http://localhost:3000/api/crm/users/:id
+  Novu Bridge:       http://localhost:3000/api/novu
+  Discovered workflowId: 'crm-notification'
+  ├ σ Discovered stepId: 'fetch-crm-data'   Type: 'custom'
+  └ σ Discovered stepId: 'send-email'       Type: 'email'

@@ -1,0 +1,6 @@
+import { serve } from "@novu/framework/next";
+import { smsAlert } from "./workflows";
+
+export const { GET, POST, OPTIONS } = serve({
+  workflows: [smsAlert],
+});

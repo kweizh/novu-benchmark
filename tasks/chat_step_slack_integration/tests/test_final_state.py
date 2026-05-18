@@ -43,7 +43,7 @@ def start_app():
     process.wait(timeout=30)
 
 def test_api_novu_endpoint(start_app):
-    url = "http://localhost:3000/api/novu"
+    url = "http://localhost:3000/api/novu?action=discover"
     req = urllib.request.Request(url)
     try:
         with urllib.request.urlopen(req) as response:

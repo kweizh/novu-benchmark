@@ -1,0 +1,93 @@
+Running command: apt-get update && apt-get install -y curl ripgrep
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.8 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Running command: echo conditional_channel_routing__ZPwd9QZ > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" -e "s/ANTHROPIC_API_KEY/${ANTHROPIC_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "anthropic": {
+      "kind": "openai",
+      "baseURL": "https://api.anthropic.com/v1",
+      "apiKey": "ANTHROPIC_API_KEY",
+      "models": {
+        "claude-opus-4-6": {
+          "name": "claude-opus-4-6"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: mkdir -p /logs/artifacts
+Command outputs captured
+Running command: export PATH="$HOME/.pochi/bin:$PATH"; pochi --model openai/gpt-5.2-codex --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Preserving your work
+
+Save a copy of files you create during this task to `/logs/artifacts/`. This directory is preserved after the run so outputs can be inspected. Organize with subdirectories if helpful (e.g., `/logs/artifacts/code/`, `/logs/artifacts/reports/`). The directory already exists and is writable.
+
+---
+
+# Novu Conditional Channel Routing
+
+## Background
+Novu is an open-source notification infrastructure platform. The Novu Framework allows developers to define notification workflows in code. In many cases, you want to conditionally send notifications across certain channels based on the payload data (e.g., only send an email if the notification is marked as critical).
+
+## Requirements
+- Initialize a Node.js Express application in `/home/user/project`.
+- Install `express`, `@novu/framework`, and `zod`.
+- Create a Novu Bridge Endpoint at `/api/novu` using `@novu/framework/express`.
+- Define a workflow named `conditional-routing`.
+- The workflow must accept a payload validated by Zod with `userName` (string) and `critical` (boolean).
+- The workflow must contain two steps:
+  1. An `inApp` step named `notify-in-app` that always runs.
+  2. An `email` step named `send-email` that is skipped if `payload.critical` is false.
+
+## Implementation Guide
+1. Initialize a Node project in `/home/user/project`.
+2. Install required dependencies.
+3. Create an `index.js` file.
+4. Define the workflow using `@novu/framework`.
+5. Use the `skip` option in the `email` step to evaluate `payload.critical`.
+6. Expose the workflow via an Express route `/api/novu` using `serve` from `@novu/framework/express`.
+7. Start the server on port 3000.
+
+## Constraints
+- Project path: `/home/user/project`
+- Start command: `node index.js`
+- Port: 3000
+- The server must listen on port 3000.
+EOF
+Command outputs captured
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured

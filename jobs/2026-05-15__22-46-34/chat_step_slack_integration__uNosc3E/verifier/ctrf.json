@@ -1,0 +1,29 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1778910647.2113566,
+            "stop": 1778910649.2822108
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_api_novu_endpoint",
+                "status": "passed",
+                "duration": 2.059457883122377,
+                "start": 1778910647.221206,
+                "stop": 1778910649.2816737,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            }
+        ]
+    }
+}

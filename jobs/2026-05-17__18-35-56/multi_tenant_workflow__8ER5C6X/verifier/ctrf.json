@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779068676.9277816,
+            "stop": 1779068682.364807
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_novu_bridge_endpoint",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 5.367456070031039,
+                "start": 1779068676.936522,
+                "stop": 1779068682.3643863,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "start_app = None\n\n    def test_novu_bridge_endpoint(start_app):\n        \"\"\"Priority 1: Test the Novu bridge endpoint response.\"\"\"\n        try:\n            req = urllib.request.Request(\"http://localhost:3000/api/novu?action=discover\", method=\"GET\")\n>           with urllib.request.urlopen(req) as response:\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\ntests/test_final_state.py:52: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nusr/lib/python3.12/urllib/request.py:215: in urlopen\n    return opener.open(url, data, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nusr/lib/python3.12/urllib/request.py:521: in open\n    response = meth(req, response)\n               ^^^^^^^^^^^^^^^^^^^\nusr/lib/python3.12/urllib/request.py:630: in http_response\n    response = self.parent.error(\nusr/lib/python3.12/urllib/request.py:559: in error\n    return self._call_chain(*args)\n           ^^^^^^^^^^^^^^^^^^^^^^^\nusr/lib/python3.12/urllib/request.py:492: in _call_chain\n    result = func(*args)\n             ^^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <urllib.request.HTTPDefaultErrorHandler object at 0xf5d1648bc7d0>\nreq = <urllib.request.Request object at 0xf5d16439d0d0>\nfp = <http.client.HTTPResponse object at 0xf5d16439e110>, code = 404\nmsg = 'Not Found', hdrs = <http.client.HTTPMessage object at 0xf5d164083860>\n\n    def http_error_default(self, req, fp, code, msg, hdrs):\n>       raise HTTPError(req.full_url, code, msg, hdrs, fp)\nE       urllib.error.HTTPError: HTTP Error 404: Not Found\n\nusr/lib/python3.12/urllib/request.py:639: HTTPError\n\nDuring handling of the above exception, another exception occurred:\n\nstart_app = None\n\n    def test_novu_bridge_endpoint(start_app):\n        \"\"\"Priority 1: Test the Novu bridge endpoint response.\"\"\"\n        try:\n            req = urllib.request.Request(\"http://localhost:3000/api/novu?action=discover\", method=\"GET\")\n            with urllib.request.urlopen(req) as response:\n                assert response.getcode() == 200, f\"Expected status code 200, got {response.getcode()}\"\n                data = json.loads(response.read().decode())\n        except Exception as e:\n>           pytest.fail(f\"Failed to fetch from /api/novu: {e}\")\nE           Failed: Failed to fetch from /api/novu: HTTP Error 404: Not Found\n\ntests/test_final_state.py:56: Failed",
+                "message": "The test failed in the call phase due to an exception"
+            }
+        ]
+    }
+}

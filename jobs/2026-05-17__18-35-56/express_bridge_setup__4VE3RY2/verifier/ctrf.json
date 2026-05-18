@@ -1,0 +1,38 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 2,
+            "passed": 2,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779068294.7880383,
+            "stop": 1779068295.8503683
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_dependencies_installed",
+                "status": "passed",
+                "duration": 0.00040239805821329355,
+                "start": 1779068294.7990866,
+                "stop": 1779068294.7996607,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_bridge_endpoint_discovery",
+                "status": "passed",
+                "duration": 1.0494105309480801,
+                "start": 1779068294.7997353,
+                "stop": 1779068295.8496351,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            }
+        ]
+    }
+}

@@ -1,0 +1,66 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 5,
+            "passed": 4,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1778930432.800094,
+            "stop": 1778930492.8664937
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_package_json_has_novu",
+                "status": "passed",
+                "duration": 0.0004200380062684417,
+                "start": 1778930432.81001,
+                "stop": 1778930432.8106203,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_workflows_file_exists",
+                "status": "passed",
+                "duration": 0.00035137205850332975,
+                "start": 1778930432.8107002,
+                "stop": 1778930432.8112054,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_api_route_exists",
+                "status": "passed",
+                "duration": 0.0003443709574639797,
+                "start": 1778930432.8112714,
+                "stop": 1778930432.811745,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_env_file_exists",
+                "status": "passed",
+                "duration": 0.0003352900967001915,
+                "start": 1778930432.8118074,
+                "stop": 1778930432.8122778,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_api_endpoint_reachable",
+                "status": "failed",
+                "duration": 60.021462540957145,
+                "start": 1778930432.8123395,
+                "stop": 1778930492.8652942,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "@pytest.fixture(scope=\"module\")\n    def start_app():\n        # Stream stdout/stderr to files so a hang/crash leaves a diagnostic trail\n        # in /logs/verifier/. Using PIPE here without draining can fill the OS pipe\n        # buffer (~64 KB) and block Vite's logger, masking the real failure.\n        log_dir = \"/logs/verifier\"\n        os.makedirs(log_dir, exist_ok=True)\n        stdout_f = open(os.path.join(log_dir, \"remix-dev-stdout.log\"), \"wb\")\n        stderr_f = open(os.path.join(log_dir, \"remix-dev-stderr.log\"), \"wb\")\n    \n        process = subprocess.Popen(\n            [\"npm\", \"run\", \"dev\"],\n            cwd=PROJECT_DIR,\n            stdout=stdout_f,\n            stderr=stderr_f,\n            preexec_fn=os.setsid\n        )\n    \n        # Wait for the app to be ready\n        if not wait_for_port(5173):\n            import signal\n            os.killpg(os.getpgid(process.pid), signal.SIGTERM)\n            stdout_f.close()\n            stderr_f.close()\n>           pytest.fail(\n                \"App failed to start and listen on port 5173. \"\n                \"See /logs/verifier/remix-dev-{stdout,stderr}.log for the dev-server output.\"\n            )\nE           Failed: App failed to start and listen on port 5173. See /logs/verifier/remix-dev-{stdout,stderr}.log for the dev-server output.\n\ntests/test_final_state.py:74: Failed"
+            }
+        ]
+    }
+}

@@ -1,0 +1,19 @@
+{
+  "endpoint": "GET http://localhost:3000/api/novu/health",
+  "response": {
+    "status": "ok",
+    "sdkVersion": "2.10.0",
+    "frameworkVersion": "2024-06-26",
+    "discovered": {
+      "workflows": 1,
+      "steps": 2
+    }
+  },
+  "serverLogs": [
+    "Novu Express app listening on port 3000",
+    "Novu endpoint available at http://localhost:3000/api/novu",
+    "Discovered workflowId: 'welcome-user'",
+    "├ σ Discovered stepId: 'notify-in-app'\tType: 'in_app'",
+    "└ σ Discovered stepId: 'send-email'\tType: 'email'"
+  ]
+}

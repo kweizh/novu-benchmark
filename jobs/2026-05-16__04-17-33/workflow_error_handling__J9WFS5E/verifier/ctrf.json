@@ -1,0 +1,38 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 2,
+            "passed": 2,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1778930904.4313505,
+            "stop": 1778930909.5017014
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_bridge_endpoint_returns_workflow",
+                "status": "passed",
+                "duration": 5.049591597053222,
+                "start": 1778930904.4400196,
+                "stop": 1778930909.4922214,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_workflow_logic_in_code",
+                "status": "passed",
+                "duration": 0.008535567903891206,
+                "start": 1778930909.4925287,
+                "stop": 1778930909.5013442,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            }
+        ]
+    }
+}

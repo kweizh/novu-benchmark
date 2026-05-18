@@ -1,0 +1,74 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 5,
+            "passed": 2,
+            "failed": 3,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1778931110.290096,
+            "stop": 1778931117.5725687
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_project_exists",
+                "status": "passed",
+                "duration": 0.0003225670661777258,
+                "start": 1778931110.295168,
+                "stop": 1778931110.295642,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_dependencies_installed",
+                "status": "passed",
+                "duration": 0.0002976958639919758,
+                "start": 1778931110.2957118,
+                "stop": 1778931110.2961187,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_workflow_file_exports_sms_alert",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.00031615199986845255,
+                "start": 1778931110.2961748,
+                "stop": 1778931110.301278,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_workflow_file_exports_sms_alert():\n        workflows_path = os.path.join(PROJECT_DIR, \"app/api/novu/workflows.ts\")\n>       assert os.path.isfile(workflows_path), f\"Workflow file not found at {workflows_path}\"\nE       AssertionError: Workflow file not found at /home/user/novu-app/app/api/novu/workflows.ts\nE       assert False\nE        +  where False = <function isfile at 0xfe7e3f920220>('/home/user/novu-app/app/api/novu/workflows.ts')\nE        +    where <function isfile at 0xfe7e3f920220> = <module 'posixpath' (frozen)>.isfile\nE        +      where <module 'posixpath' (frozen)> = os.path\n\ntests/test_final_state.py:60: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_final_state.py::test_route_file_exports_handlers",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.00031873711850494146,
+                "start": 1778931110.3013387,
+                "stop": 1778931110.3028047,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_route_file_exports_handlers():\n        route_path = os.path.join(PROJECT_DIR, \"app/api/novu/route.ts\")\n>       assert os.path.isfile(route_path), f\"Route file not found at {route_path}\"\nE       AssertionError: Route file not found at /home/user/novu-app/app/api/novu/route.ts\nE       assert False\nE        +  where False = <function isfile at 0xfe7e3f920220>('/home/user/novu-app/app/api/novu/route.ts')\nE        +    where <function isfile at 0xfe7e3f920220> = <module 'posixpath' (frozen)>.isfile\nE        +      where <module 'posixpath' (frozen)> = os.path\n\ntests/test_final_state.py:70: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_final_state.py::test_bridge_endpoint_responding",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 7.266176253091544,
+                "start": 1778931110.3028631,
+                "stop": 1778931117.57221,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "start_app = None\n\n    def test_bridge_endpoint_responding(start_app):\n        result = subprocess.run(\n            [\"curl\", \"-s\", \"-o\", \"/dev/null\", \"-w\", \"%{http_code}\", \"http://localhost:3000/api/novu\"],\n            capture_output=True, text=True\n        )\n        assert result.returncode == 0, f\"curl request failed: {result.stderr}\"\n        # Next.js might return 200 or 405 or 400 depending on the endpoint configuration,\n        # but it should respond and not be 404.\n        http_code = result.stdout.strip()\n>       assert http_code != \"404\", \"Bridge endpoint returned 404, expected it to be registered.\"\nE       AssertionError: Bridge endpoint returned 404, expected it to be registered.\nE       assert '404' != '404'\n\ntests/test_final_state.py:88: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

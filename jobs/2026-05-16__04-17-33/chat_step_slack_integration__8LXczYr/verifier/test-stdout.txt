@@ -1,0 +1,54 @@
+downloading uv 0.9.7 aarch64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Downloading pygments (1.2MiB)
+ Downloading pygments
+Installed 7 packages in 7ms
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collected 1 item
+
+tests/test_final_state.py F                                              [100%]
+
+=================================== FAILURES ===================================
+____________________________ test_api_novu_endpoint ____________________________
+
+start_app = None
+
+    def test_api_novu_endpoint(start_app):
+        url = "http://localhost:3000/api/novu?action=discover"
+        req = urllib.request.Request(url)
+        try:
+            with urllib.request.urlopen(req) as response:
+                assert response.status == 200, f"Expected status 200, got {response.status}"
+                data = json.loads(response.read().decode('utf-8'))
+        except Exception as e:
+            pytest.fail(f"Failed to fetch {url}: {e}")
+    
+        assert "workflows" in data, "Expected 'workflows' array in the response."
+        workflows = data["workflows"]
+    
+        slack_workflow = next((w for w in workflows if w.get("workflowId") == "slack-notification"), None)
+        assert slack_workflow is not None, "Workflow 'slack-notification' not found in the registered workflows."
+    
+        steps = slack_workflow.get("steps", [])
+        chat_step = next((s for s in steps if s.get("stepId") == "send-to-slack"), None)
+    
+>       assert chat_step is not None, "Step 'send-to-slack' not found in the workflow steps."
+E       AssertionError: Step 'send-to-slack' not found in the workflow steps.
+E       assert None is not None
+
+tests/test_final_state.py:64: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_final_state.py::test_api_novu_endpoint - AssertionError: St...
+============================== 1 failed in 2.07s ===============================

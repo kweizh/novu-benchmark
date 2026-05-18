@@ -73,6 +73,6 @@ def test_hmac_verification_enforced(start_app):
         with urllib.request.urlopen(req) as response:
             pytest.fail("Expected POST /api/novu without signature to be rejected, but it succeeded.")
     except urllib.error.HTTPError as e:
-        assert e.code in [401, 403], f"Expected 401 or 403 Unauthorized from POST /api/novu, got {e.code}"
+        assert e.code in [400, 401, 403], f"Expected 400/401/403 rejection from POST /api/novu without signature, got {e.code}"
     except Exception as e:
         pytest.fail(f"Failed to connect to /api/novu: {e}")

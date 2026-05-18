@@ -1,0 +1,29 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1778910946.5656729,
+            "stop": 1778910947.2633297
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_dynamic_provider_implementation",
+                "status": "passed",
+                "duration": 0.6938740100013092,
+                "start": 1778910946.568993,
+                "stop": 1778910947.2631292,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            }
+        ]
+    }
+}

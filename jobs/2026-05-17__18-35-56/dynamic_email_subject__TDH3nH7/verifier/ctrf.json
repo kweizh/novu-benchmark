@@ -1,0 +1,59 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 4,
+            "passed": 3,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779068758.5382252,
+            "stop": 1779068760.7317228
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_bridge_endpoint",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 2.1085776461986825,
+                "start": 1779068758.5505023,
+                "stop": 1779068760.7135572,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "start_app = None\n\n    def test_bridge_endpoint(start_app):\n        \"\"\"Priority 3: Check bridge endpoint is accessible.\"\"\"\n        try:\n            req = urllib.request.Request(\"http://localhost:3000/api/novu\")\n>           with urllib.request.urlopen(req) as response:\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\ntests/test_final_state.py:53: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nusr/lib/python3.12/urllib/request.py:215: in urlopen\n    return opener.open(url, data, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nusr/lib/python3.12/urllib/request.py:521: in open\n    response = meth(req, response)\n               ^^^^^^^^^^^^^^^^^^^\nusr/lib/python3.12/urllib/request.py:630: in http_response\n    response = self.parent.error(\nusr/lib/python3.12/urllib/request.py:559: in error\n    return self._call_chain(*args)\n           ^^^^^^^^^^^^^^^^^^^^^^^\nusr/lib/python3.12/urllib/request.py:492: in _call_chain\n    result = func(*args)\n             ^^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <urllib.request.HTTPDefaultErrorHandler object at 0xfb074e392210>\nreq = <urllib.request.Request object at 0xfb074e220ec0>\nfp = <http.client.HTTPResponse object at 0xfb074e499510>, code = 500\nmsg = 'Internal Server Error'\nhdrs = <http.client.HTTPMessage object at 0xfb074e0728d0>\n\n    def http_error_default(self, req, fp, code, msg, hdrs):\n>       raise HTTPError(req.full_url, code, msg, hdrs, fp)\nE       urllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nusr/lib/python3.12/urllib/request.py:639: HTTPError\n\nDuring handling of the above exception, another exception occurred:\n\nstart_app = None\n\n    def test_bridge_endpoint(start_app):\n        \"\"\"Priority 3: Check bridge endpoint is accessible.\"\"\"\n        try:\n            req = urllib.request.Request(\"http://localhost:3000/api/novu\")\n            with urllib.request.urlopen(req) as response:\n                assert response.status == 200, f\"Expected status 200, got {response.status}\"\n        except Exception as e:\n>           pytest.fail(f\"Failed to reach bridge endpoint: {e}\")\nE           Failed: Failed to reach bridge endpoint: HTTP Error 500: Internal Server Error\n\ntests/test_final_state.py:56: Failed",
+                "message": "The test failed in the call phase due to an exception"
+            },
+            {
+                "name": "test_final_state.py::test_workflow_file_exists",
+                "status": "passed",
+                "duration": 0.00038891308940947056,
+                "start": 1779068760.7137318,
+                "stop": 1779068760.7142878,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_index_file_exists",
+                "status": "passed",
+                "duration": 0.0003537039738148451,
+                "start": 1779068760.7143536,
+                "stop": 1779068760.7148561,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_workflow_definition",
+                "status": "passed",
+                "duration": 0.0162121900357306,
+                "start": 1779068760.7149165,
+                "stop": 1779068760.73126,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            }
+        ]
+    }
+}

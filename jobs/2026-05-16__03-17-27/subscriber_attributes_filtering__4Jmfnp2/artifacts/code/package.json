@@ -1,0 +1,19 @@
+{
+  "name": "novu-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@novu/framework": "^2.10.0",
+    "@types/node": "^25.8.0",
+    "typescript": "^5.3.3",
+    "zod": "^3.22.4"
+  }
+}

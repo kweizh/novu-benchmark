@@ -1,0 +1,51 @@
+{
+    "id": "043f09f9-cd34-4304-997f-65fceda6edcf",
+    "started_at": "2026-05-16T04:17:35.123418",
+    "finished_at": "2026-05-16T04:32:08.767470",
+    "n_total_trials": 17,
+    "stats": {
+        "n_trials": 17,
+        "n_errors": 1,
+        "evals": {
+            "pochi__gpt-5.2-codex__novu-tasks": {
+                "n_trials": 17,
+                "n_errors": 1,
+                "metrics": [
+                    {
+                        "mean": 0.29411764705882354
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "express_bridge_setup__HpNhBSS",
+                            "subscriber_attributes_filtering__LHJH6vg",
+                            "hmac_security_express__Rfirwb7",
+                            "email_push_multi_channel__FTX3A58",
+                            "workflow_error_handling__J9WFS5E"
+                        ],
+                        "0.0": [
+                            "remix_quickstart_setup__eWDkpJe",
+                            "novu_payload_default__UqiR9An",
+                            "custom_step_mock_crm__cFU7BAK",
+                            "chat_step_slack_integration__8LXczYr",
+                            "sms_step_twilio_integration__FEqwspF",
+                            "conditional_channel_routing__ZPwd9QZ",
+                            "count_based_digest_workflow__Hm4fzvT",
+                            "multi_tenant_workflow__omngjkf",
+                            "zod_schema_validation_advanced__uMFfpQz",
+                            "delay_step_implementation__JYnueHW",
+                            "dynamic_email_subject__n4h7XHi",
+                            "override_provider_config__YhsaoGu"
+                        ]
+                    }
+                },
+                "exception_stats": {
+                    "AgentTimeoutError": [
+                        "sms_step_twilio_integration__FEqwspF"
+                    ]
+                }
+            }
+        }
+    }
+}

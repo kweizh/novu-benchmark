@@ -1,0 +1,47 @@
+{
+    "id": "167f0277-7460-434d-9cbf-3829f3405141",
+    "started_at": "2026-05-15T22:46:35.512981",
+    "finished_at": "2026-05-15T22:56:23.829517",
+    "n_total_trials": 17,
+    "stats": {
+        "n_trials": 17,
+        "n_errors": 0,
+        "evals": {
+            "pochi__gemini-3-flash__novu-tasks": {
+                "n_trials": 17,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 0.8235294117647058
+                    }
+                ],
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "express_bridge_setup__PxqVPnu",
+                            "novu_payload_default__nXVFzQP",
+                            "subscriber_attributes_filtering__yzCuiNL",
+                            "hmac_security_express__7PvvT5Z",
+                            "custom_step_mock_crm__73yHYNY",
+                            "chat_step_slack_integration__uNosc3E",
+                            "email_push_multi_channel__bjmGWUF",
+                            "sms_step_twilio_integration__zDXypSP",
+                            "conditional_channel_routing__wM6dxwn",
+                            "count_based_digest_workflow__oD3MXVx",
+                            "delay_step_implementation__aTrV98i",
+                            "dynamic_email_subject__McdrP2X",
+                            "workflow_error_handling__pxVLLRS",
+                            "override_provider_config__qK3s4nW"
+                        ],
+                        "0.0": [
+                            "remix_quickstart_setup__8d3YXN6",
+                            "multi_tenant_workflow__QnGF7wd",
+                            "zod_schema_validation_advanced__yWrsKCk"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        }
+    }
+}

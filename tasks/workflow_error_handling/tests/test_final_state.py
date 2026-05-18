@@ -43,7 +43,7 @@ def start_app():
 
 def test_bridge_endpoint_returns_workflow(start_app):
     """Verify that the Novu Bridge is accessible and returns the workflow definition."""
-    req = urllib.request.Request("http://localhost:3000/api/novu")
+    req = urllib.request.Request("http://localhost:3000/api/novu?action=discover")
     try:
         with urllib.request.urlopen(req) as response:
             assert response.status == 200, f"Expected 200 OK, got {response.status}"

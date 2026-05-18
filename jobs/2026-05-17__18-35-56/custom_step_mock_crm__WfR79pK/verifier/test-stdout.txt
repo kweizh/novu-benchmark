@@ -1,0 +1,73 @@
+downloading uv 0.9.7 aarch64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Downloading pygments (1.2MiB)
+ Downloading pygments
+Installed 7 packages in 5ms
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collected 3 items
+
+tests/test_final_state.py .F.                                            [100%]
+
+=================================== FAILURES ===================================
+__________________________ test_novu_bridge_endpoint ___________________________
+
+start_app = None
+
+    def test_novu_bridge_endpoint(start_app):
+        """Priority 1: Use curl to verify the Novu bridge endpoint returns the workflow."""
+        result = subprocess.run(
+            ["curl", "-s", "http://localhost:3000/api/novu?action=discover"],
+            capture_output=True, text=True
+        )
+        assert result.returncode == 0, f"curl failed: {result.stderr}"
+>       data = json.loads(result.stdout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_final_state.py:61: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+usr/lib/python3.12/json/__init__.py:346: in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+usr/lib/python3.12/json/decoder.py:337: in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <json.decoder.JSONDecoder object at 0xfb0e590181a0>
+s = '<!DOCTYPE html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n<title>Error</title>\n</head>\n<body>\n<pre>TypeEr...&nbsp; &nbsp;at Layer.handleRequest (/home/user/app/node_modules/router/lib/layer.js:152:17)</pre>\n</body>\n</html>\n'
+idx = 0
+
+    def raw_decode(self, s, idx=0):
+        """Decode a JSON document from ``s`` (a ``str`` beginning with
+        a JSON document) and return a 2-tuple of the Python
+        representation and the index in ``s`` where the document ended.
+    
+        This can be used to decode a JSON document from a string that may
+        have extraneous data at the end.
+    
+        """
+        try:
+            obj, end = self.scan_once(s, idx)
+        except StopIteration as err:
+>           raise JSONDecodeError("Expecting value", s, err.value) from None
+E           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+usr/lib/python3.12/json/decoder.py:355: JSONDecodeError
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED tests/test_final_state.py::test_crm_endpoint
+PASSED tests/test_final_state.py::test_index_js_contents
+FAILED tests/test_final_state.py::test_novu_bridge_endpoint - json.decoder.JS...
+========================= 1 failed, 2 passed in 1.07s ==========================

@@ -1,0 +1,104 @@
+downloading uv 0.9.7 aarch64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Downloading pygments (1.2MiB)
+ Downloading pygments
+Installed 7 packages in 6ms
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collected 4 items
+
+tests/test_final_state.py F..F                                           [100%]
+
+=================================== FAILURES ===================================
+_____________________________ test_bridge_endpoint _____________________________
+
+start_app = None
+
+    def test_bridge_endpoint(start_app):
+        """Priority 3: Check bridge endpoint is accessible."""
+        try:
+            req = urllib.request.Request("http://localhost:3000/api/novu")
+>           with urllib.request.urlopen(req) as response:
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_final_state.py:53: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+usr/lib/python3.12/urllib/request.py:215: in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+usr/lib/python3.12/urllib/request.py:521: in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+usr/lib/python3.12/urllib/request.py:630: in http_response
+    response = self.parent.error(
+usr/lib/python3.12/urllib/request.py:559: in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+usr/lib/python3.12/urllib/request.py:492: in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <urllib.request.HTTPDefaultErrorHandler object at 0xf4fb52be8890>
+req = <urllib.request.Request object at 0xf4fb52ade600>
+fp = <http.client.HTTPResponse object at 0xf4fb52ca3f40>, code = 500
+msg = 'Internal Server Error'
+hdrs = <http.client.HTTPMessage object at 0xf4fb527c2660>
+
+    def http_error_default(self, req, fp, code, msg, hdrs):
+>       raise HTTPError(req.full_url, code, msg, hdrs, fp)
+E       urllib.error.HTTPError: HTTP Error 500: Internal Server Error
+
+usr/lib/python3.12/urllib/request.py:639: HTTPError
+
+During handling of the above exception, another exception occurred:
+
+start_app = None
+
+    def test_bridge_endpoint(start_app):
+        """Priority 3: Check bridge endpoint is accessible."""
+        try:
+            req = urllib.request.Request("http://localhost:3000/api/novu")
+            with urllib.request.urlopen(req) as response:
+                assert response.status == 200, f"Expected status 200, got {response.status}"
+        except Exception as e:
+>           pytest.fail(f"Failed to reach bridge endpoint: {e}")
+E           Failed: Failed to reach bridge endpoint: HTTP Error 500: Internal Server Error
+
+tests/test_final_state.py:56: Failed
+___________________________ test_workflow_definition ___________________________
+
+    def test_workflow_definition():
+        """Priority 3: Check workflow definition."""
+        with open(WORKFLOW_FILE, "r") as f:
+            content = f.read()
+    
+        assert "dynamic-email" in content, "Expected 'dynamic-email' workflow name in workflow.ts"
+        assert "orderId" in content, "Expected 'orderId' in workflow.ts"
+        assert "customerName" in content, "Expected 'customerName' in workflow.ts"
+        assert "z.object" in content or "zod.object" in content, "Expected Zod schema in workflow.ts"
+    
+        # Check dynamic subject
+>       assert "payload.orderId" in content, "Expected payload.orderId to be used in subject"
+E       AssertionError: Expected payload.orderId to be used in subject
+E       assert 'payload.orderId' in 'import { workflow } from "@novu/framework";\nimport { z } from "zod";\n\nexport const dynamicEmailWorkflow = workflow...       subject: `Order ${orderId} confirmed for ${customerName}`,\n        body: "Hello",\n      },\n    };\n  }\n);\n'
+
+tests/test_final_state.py:77: AssertionError
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED tests/test_final_state.py::test_workflow_file_exists
+PASSED tests/test_final_state.py::test_index_file_exists
+FAILED tests/test_final_state.py::test_bridge_endpoint - Failed: Failed to re...
+FAILED tests/test_final_state.py::test_workflow_definition - AssertionError: ...
+========================= 2 failed, 2 passed in 2.16s ==========================

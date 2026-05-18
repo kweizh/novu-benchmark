@@ -54,7 +54,7 @@ def test_crm_endpoint(start_app):
 def test_novu_bridge_endpoint(start_app):
     """Priority 1: Use curl to verify the Novu bridge endpoint returns the workflow."""
     result = subprocess.run(
-        ["curl", "-s", "http://localhost:3000/api/novu"],
+        ["curl", "-s", "http://localhost:3000/api/novu?action=discover"],
         capture_output=True, text=True
     )
     assert result.returncode == 0, f"curl failed: {result.stderr}"

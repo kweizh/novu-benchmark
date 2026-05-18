@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1778929553.7104673,
+            "stop": 1778929557.905952
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_express_app_and_novu_endpoint",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 4.018142924178392,
+                "start": 1778929553.8683279,
+                "stop": 1778929557.9055524,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_express_app_and_novu_endpoint():\n        project_path = \"/home/user/myproject\"\n        assert os.path.exists(project_path), f\"Project directory {project_path} does not exist\"\n    \n        # Start the server\n        process = subprocess.Popen(\n            [\"node\", \"index.js\"],\n            cwd=project_path,\n            stdout=subprocess.PIPE,\n            stderr=subprocess.PIPE\n        )\n    \n        try:\n            # Wait for the server to start\n            time.sleep(4)\n    \n            # Test the endpoint\n            response = requests.get(\"http://localhost:3000/api/novu\")\n            assert response.status_code == 200, f\"Expected status code 200, but got {response.status_code}\"\n    \n            data = response.json()\n>           assert \"workflows\" in data, \"Response does not contain 'workflows'\"\nE           AssertionError: Response does not contain 'workflows'\nE           assert 'workflows' in {'discovered': {'steps': 2, 'workflows': 1}, 'frameworkVersion': '2024-06-26', 'sdkVersion': '2.10.0', 'status': 'ok'}\n\n/tests/test_final_state.py:28: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

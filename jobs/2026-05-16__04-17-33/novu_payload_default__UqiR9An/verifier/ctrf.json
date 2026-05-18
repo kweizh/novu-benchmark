@@ -1,0 +1,50 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 3,
+            "passed": 2,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1778930357.5096762,
+            "stop": 1778930360.4236774
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_workflow_file_exists",
+                "status": "passed",
+                "duration": 0.0003208309644833207,
+                "start": 1778930357.5143235,
+                "stop": 1778930357.5147822,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_workflow_compiles",
+                "status": "passed",
+                "duration": 2.9022205710643902,
+                "start": 1778930357.5148706,
+                "stop": 1778930360.4173408,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_workflow_schema_default_value",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0005087458994239569,
+                "start": 1778930360.4174645,
+                "stop": 1778930360.4234035,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_workflow_schema_default_value():\n        \"\"\"Priority 3 fallback: Verify the Zod schema definition via string matching.\"\"\"\n        with open(WORKFLOW_FILE, 'r') as f:\n            content = f.read()\n    \n        assert \"z.object\" in content, \"Expected 'z.object' to define the payload schema.\"\n        assert \"userName\" in content, \"Expected 'userName' field in the payload schema.\"\n        assert \".default('Guest')\" in content or \".default(\\\"Guest\\\")\" in content or \".default(`Guest`)\" in content, \\\n            \"Expected 'userName' to have a default value of 'Guest' using .default('Guest').\"\n>       assert \"step.email\" in content, \"Expected an email step to be defined.\"\nE       AssertionError: Expected an email step to be defined.\nE       assert 'step.email' in \"import { workflow } from '@novu/framework';\\nimport { z } from 'zod';\\n\\nexport const welcomeUser = workflow('welcome...',\\n      inputs: {\\n        subject: ({ payload }) => `Welcome, ${payload.userName}!`,\\n      },\\n    },\\n  ],\\n});\\n\"\n\ntests/test_final_state.py:38: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

@@ -54,7 +54,7 @@ def test_index_file_contains_steps():
 
 def test_api_endpoint_response(start_app):
     try:
-        req = urllib.request.Request("http://localhost:3000/api/novu")
+        req = urllib.request.Request("http://localhost:3000/api/novu?action=discover")
         with urllib.request.urlopen(req) as response:
             assert response.status == 200, f"Expected status 200, got {response.status}"
             data = json.loads(response.read().decode())

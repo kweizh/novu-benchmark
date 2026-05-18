@@ -3,6 +3,7 @@ image = "node:20-bullseye"
 
 [environment.env]
 POCHI_API_KEY = "${POCHI_API_KEY}"
+NOVU_API_KEY = "${NOVU_API_KEY}"
 POCHI_LOG = "debug"
 
 [verifier]
@@ -10,4 +11,6 @@ dependencies = [ "requests" ]
 
 [verifier.env]
 POCHI_API_KEY = "${POCHI_API_KEY}"
+NOVU_API_KEY = "${NOVU_API_KEY}"
 POCHI_LOG = "debug"
+PYTEST_ADDOPTS = "-p no:cacheprovider"

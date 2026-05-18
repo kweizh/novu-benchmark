@@ -1,0 +1,50 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 3,
+            "passed": 2,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779068471.0485687,
+            "stop": 1779068472.1177635
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_crm_endpoint",
+                "status": "passed",
+                "duration": 1.0247799759963527,
+                "start": 1779068471.0537574,
+                "stop": 1779068472.0797665,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_novu_bridge_endpoint",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0059934318996965885,
+                "start": 1779068472.0800822,
+                "stop": 1779068472.1059914,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "start_app = None\n\n    def test_novu_bridge_endpoint(start_app):\n        \"\"\"Priority 1: Use curl to verify the Novu bridge endpoint returns the workflow.\"\"\"\n        result = subprocess.run(\n            [\"curl\", \"-s\", \"http://localhost:3000/api/novu?action=discover\"],\n            capture_output=True, text=True\n        )\n        assert result.returncode == 0, f\"curl failed: {result.stderr}\"\n>       data = json.loads(result.stdout)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^\n\ntests/test_final_state.py:61: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nusr/lib/python3.12/json/__init__.py:346: in loads\n    return _default_decoder.decode(s)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\nusr/lib/python3.12/json/decoder.py:337: in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <json.decoder.JSONDecoder object at 0xfb0e590181a0>\ns = '<!DOCTYPE html>\\n<html lang=\"en\">\\n<head>\\n<meta charset=\"utf-8\">\\n<title>Error</title>\\n</head>\\n<body>\\n<pre>TypeEr...&nbsp; &nbsp;at Layer.handleRequest (/home/user/app/node_modules/router/lib/layer.js:152:17)</pre>\\n</body>\\n</html>\\n'\nidx = 0\n\n    def raw_decode(self, s, idx=0):\n        \"\"\"Decode a JSON document from ``s`` (a ``str`` beginning with\n        a JSON document) and return a 2-tuple of the Python\n        representation and the index in ``s`` where the document ended.\n    \n        This can be used to decode a JSON document from a string that may\n        have extraneous data at the end.\n    \n        \"\"\"\n        try:\n            obj, end = self.scan_once(s, idx)\n        except StopIteration as err:\n>           raise JSONDecodeError(\"Expecting value\", s, err.value) from None\nE           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n\nusr/lib/python3.12/json/decoder.py:355: JSONDecodeError",
+                "message": "The test failed in the call phase"
+            },
+            {
+                "name": "test_final_state.py::test_index_js_contents",
+                "status": "passed",
+                "duration": 0.010921180131845176,
+                "start": 1779068472.1061747,
+                "stop": 1779068472.1174421,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            }
+        ]
+    }
+}

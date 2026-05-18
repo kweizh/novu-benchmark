@@ -1,0 +1,41 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 2,
+            "passed": 1,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779068917.2482445,
+            "stop": 1779068922.3643208
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_bridge_endpoint_returns_workflow",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 5.04566478903871,
+                "start": 1779068917.2577107,
+                "stop": 1779068922.355272,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "start_app = <Popen: returncode: None args: ['node', 'index.js']>\n\n    def test_bridge_endpoint_returns_workflow(start_app):\n        \"\"\"Verify that the Novu Bridge is accessible and returns the workflow definition.\"\"\"\n        req = urllib.request.Request(\"http://localhost:3000/api/novu?action=discover\")\n        try:\n>           with urllib.request.urlopen(req) as response:\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\ntests/test_final_state.py:48: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nusr/lib/python3.12/urllib/request.py:215: in urlopen\n    return opener.open(url, data, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nusr/lib/python3.12/urllib/request.py:521: in open\n    response = meth(req, response)\n               ^^^^^^^^^^^^^^^^^^^\nusr/lib/python3.12/urllib/request.py:630: in http_response\n    response = self.parent.error(\nusr/lib/python3.12/urllib/request.py:559: in error\n    return self._call_chain(*args)\n           ^^^^^^^^^^^^^^^^^^^^^^^\nusr/lib/python3.12/urllib/request.py:492: in _call_chain\n    result = func(*args)\n             ^^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <urllib.request.HTTPDefaultErrorHandler object at 0xf2cafc998a10>\nreq = <urllib.request.Request object at 0xf2cafc98f110>\nfp = <http.client.HTTPResponse object at 0xf2cafca992d0>, code = 500\nmsg = 'Internal Server Error'\nhdrs = <http.client.HTTPMessage object at 0xf2cafc672ab0>\n\n    def http_error_default(self, req, fp, code, msg, hdrs):\n>       raise HTTPError(req.full_url, code, msg, hdrs, fp)\nE       urllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nusr/lib/python3.12/urllib/request.py:639: HTTPError\n\nDuring handling of the above exception, another exception occurred:\n\nstart_app = <Popen: returncode: None args: ['node', 'index.js']>\n\n    def test_bridge_endpoint_returns_workflow(start_app):\n        \"\"\"Verify that the Novu Bridge is accessible and returns the workflow definition.\"\"\"\n        req = urllib.request.Request(\"http://localhost:3000/api/novu?action=discover\")\n        try:\n            with urllib.request.urlopen(req) as response:\n                assert response.status == 200, f\"Expected 200 OK, got {response.status}\"\n                data = json.loads(response.read().decode())\n    \n                # The bridge endpoint returns workflow definitions\n                workflows = data.get(\"workflows\", [])\n                workflow_ids = [w.get(\"workflowId\") for w in workflows]\n    \n                assert \"error-handling-workflow\" in workflow_ids, \\\n                    f\"Expected 'error-handling-workflow' in workflows, got: {workflow_ids}\"\n    \n                workflow = next(w for w in workflows if w.get(\"workflowId\") == \"error-handling-workflow\")\n    \n                # Verify steps\n                steps = workflow.get(\"steps\", [])\n                step_ids = [s.get(\"stepId\") for s in steps]\n                assert \"fetch-data\" in step_ids, f\"Expected 'fetch-data' custom step, got: {step_ids}\"\n                assert \"send-email\" in step_ids, f\"Expected 'send-email' email step, got: {step_ids}\"\n    \n        except Exception as e:\n>           pytest.fail(f\"Failed to fetch from Bridge endpoint: {e}\")\nE           Failed: Failed to fetch from Bridge endpoint: HTTP Error 500: Internal Server Error\n\ntests/test_final_state.py:68: Failed",
+                "message": "The test failed in the call phase due to an exception"
+            },
+            {
+                "name": "test_final_state.py::test_workflow_logic_in_code",
+                "status": "passed",
+                "duration": 0.008510850020684302,
+                "start": 1779068922.3554442,
+                "stop": 1779068922.3641133,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            }
+        ]
+    }
+}

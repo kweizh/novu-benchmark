@@ -1,0 +1,76 @@
+downloading uv 0.9.7 aarch64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Downloading pygments (1.2MiB)
+ Downloading pygments
+Installed 7 packages in 8ms
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collected 2 items
+
+tests/test_final_state.py EF                                             [100%]
+
+==================================== ERRORS ====================================
+_________________ ERROR at setup of test_api_endpoint_responds _________________
+
+    @pytest.fixture(scope="module")
+    def start_app():
+        # Install dependencies
+        subprocess.run(["npm", "install"], cwd=PROJECT_DIR, check=True)
+    
+        # Start the app
+        process = subprocess.Popen(
+            ["node", "index.js"],
+            cwd=PROJECT_DIR,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            preexec_fn=os.setsid
+        )
+    
+        # Wait for the app to be ready
+        if not wait_for_port(3000):
+            import signal
+            os.killpg(os.getpgid(process.pid), signal.SIGTERM)
+>           pytest.fail("App failed to start and listen on port 3000.")
+E           Failed: App failed to start and listen on port 3000.
+
+tests/test_final_state.py:38: Failed
+---------------------------- Captured stdout setup -----------------------------
+
+removed 1 package, and audited 118 packages in 394ms
+
+40 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+=================================== FAILURES ===================================
+_________________________ test_skip_logic_implemented __________________________
+
+    def test_skip_logic_implemented():
+        """Verify that the code contains the skip logic for the email step based on payload.critical."""
+        index_path = os.path.join(PROJECT_DIR, "index.js")
+        assert os.path.isfile(index_path), f"index.js not found at {index_path}"
+    
+        with open(index_path, "r") as f:
+            content = f.read()
+    
+        # Check for email step definition
+>       assert "step.email" in content, "Expected 'step.email' to be defined in the workflow."
+E       AssertionError: Expected 'step.email' to be defined in the workflow.
+E       assert 'step.email' in "const express = require('express');\nconst { serve } = require('@novu/framework/express');\nconst { workflow, inApp, ...rkflows: [conditionalRouting] }));\n\napp.listen(3000, () => {\n  console.log('Server listening on port 3000');\n});\n"
+
+tests/test_final_state.py:68: AssertionError
+=========================== short test summary info ============================
+ERROR tests/test_final_state.py::test_api_endpoint_responds - Failed: App fai...
+FAILED tests/test_final_state.py::test_skip_logic_implemented - AssertionErro...
+========================= 1 failed, 1 error in 30.51s ==========================

@@ -1,0 +1,95 @@
+Running command: apt-get update && apt-get install -y curl ripgrep
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.8 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Running command: echo custom_step_mock_crm__73yHYNY > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" -e "s/ANTHROPIC_API_KEY/${ANTHROPIC_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "anthropic": {
+      "kind": "openai",
+      "baseURL": "https://api.anthropic.com/v1",
+      "apiKey": "ANTHROPIC_API_KEY",
+      "models": {
+        "claude-opus-4-6": {
+          "name": "claude-opus-4-6"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: mkdir -p /logs/artifacts
+Command outputs captured
+Running command: export PATH="$HOME/.pochi/bin:$PATH"; pochi --model google/gemini-3-flash --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Preserving your work
+
+Save a copy of files you create during this task to `/logs/artifacts/`. This directory is preserved after the run so outputs can be inspected. Organize with subdirectories if helpful (e.g., `/logs/artifacts/code/`, `/logs/artifacts/reports/`). The directory already exists and is writable.
+
+---
+
+# Novu Custom Step with Mock CRM
+
+## Background
+You have an Express.js application that serves as both a mock CRM and a Novu Bridge. Novu provides a `step.custom` feature that allows workflows to fetch external data and use it in subsequent steps. Your task is to implement a Novu workflow that uses `step.custom` to fetch user details from a mock CRM API and then sends an email notification using that data.
+
+## Requirements
+1. Initialize an Express.js project in `/home/user/app`.
+2. Install `@novu/framework`, `@novu/node`, `express`, and `zod`.
+3. Create an Express server in `/home/user/app/index.js` running on port 3000.
+4. Create a mock CRM endpoint `GET /api/crm/users/:id` that returns a JSON object `{ "name": "Alice", "company": "Acme Corp" }` for any ID.
+5. Define a Novu workflow named `crm-notification` with a payload schema requiring `userId` (string).
+6. In the workflow, add a `step.custom` named `fetch-crm-data` that makes an HTTP GET request (e.g., using `fetch`) to `http://localhost:3000/api/crm/users/${payload.userId}` and returns the JSON response. Define the `outputSchema` for the custom step to expect `name` and `company` as strings.
+7. Add a `step.email` named `send-email` that uses the data returned from the custom step. The email subject should be `"Welcome to ${company}!"` and the body should be `"Hello ${name}, welcome to ${company}."`.
+8. Serve the Novu workflow at `/api/novu` using the Express adapter from `@novu/framework/express`.
+
+## Implementation Guide
+1. Run `npm init -y` and `npm install express @novu/framework @novu/node zod`.
+2. In `index.js`, use `express.json()` middleware.
+3. Implement the `GET /api/crm/users/:id` route.
+4. Implement the Novu workflow using `workflow`, `step.custom`, and `step.email`.
+5. Use `serve` from `@novu/framework/express` to mount the workflow at `/api/novu`.
+6. Start the server with `node index.js`.
+
+## Constraints
+- Project path: `/home/user/app`
+- Start command: `node index.js`
+- Port: 3000
+- The custom step must make a real HTTP request to the mock CRM endpoint.
+
+## Integrations
+- None
+EOF
+Command outputs captured
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured

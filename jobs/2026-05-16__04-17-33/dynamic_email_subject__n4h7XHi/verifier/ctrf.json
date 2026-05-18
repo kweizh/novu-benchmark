@@ -1,0 +1,62 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 4,
+            "passed": 2,
+            "failed": 2,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1778930802.7727218,
+            "stop": 1778930804.9285657
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_bridge_endpoint",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 2.07684531097766,
+                "start": 1778930802.7852464,
+                "stop": 1778930804.9218938,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "start_app = None\n\n    def test_bridge_endpoint(start_app):\n        \"\"\"Priority 3: Check bridge endpoint is accessible.\"\"\"\n        try:\n            req = urllib.request.Request(\"http://localhost:3000/api/novu\")\n>           with urllib.request.urlopen(req) as response:\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\ntests/test_final_state.py:53: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nusr/lib/python3.12/urllib/request.py:215: in urlopen\n    return opener.open(url, data, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nusr/lib/python3.12/urllib/request.py:521: in open\n    response = meth(req, response)\n               ^^^^^^^^^^^^^^^^^^^\nusr/lib/python3.12/urllib/request.py:630: in http_response\n    response = self.parent.error(\nusr/lib/python3.12/urllib/request.py:559: in error\n    return self._call_chain(*args)\n           ^^^^^^^^^^^^^^^^^^^^^^^\nusr/lib/python3.12/urllib/request.py:492: in _call_chain\n    result = func(*args)\n             ^^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <urllib.request.HTTPDefaultErrorHandler object at 0xf4fb52be8890>\nreq = <urllib.request.Request object at 0xf4fb52ade600>\nfp = <http.client.HTTPResponse object at 0xf4fb52ca3f40>, code = 500\nmsg = 'Internal Server Error'\nhdrs = <http.client.HTTPMessage object at 0xf4fb527c2660>\n\n    def http_error_default(self, req, fp, code, msg, hdrs):\n>       raise HTTPError(req.full_url, code, msg, hdrs, fp)\nE       urllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nusr/lib/python3.12/urllib/request.py:639: HTTPError\n\nDuring handling of the above exception, another exception occurred:\n\nstart_app = None\n\n    def test_bridge_endpoint(start_app):\n        \"\"\"Priority 3: Check bridge endpoint is accessible.\"\"\"\n        try:\n            req = urllib.request.Request(\"http://localhost:3000/api/novu\")\n            with urllib.request.urlopen(req) as response:\n                assert response.status == 200, f\"Expected status 200, got {response.status}\"\n        except Exception as e:\n>           pytest.fail(f\"Failed to reach bridge endpoint: {e}\")\nE           Failed: Failed to reach bridge endpoint: HTTP Error 500: Internal Server Error\n\ntests/test_final_state.py:56: Failed",
+                "message": "The test failed in the call phase due to an exception"
+            },
+            {
+                "name": "test_final_state.py::test_workflow_file_exists",
+                "status": "passed",
+                "duration": 0.00031195487827062607,
+                "start": 1778930804.922051,
+                "stop": 1778930804.9225028,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_index_file_exists",
+                "status": "passed",
+                "duration": 0.0002865379210561514,
+                "start": 1778930804.922564,
+                "stop": 1778930804.922968,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_workflow_definition",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.004029621020890772,
+                "start": 1778930804.9230504,
+                "stop": 1778930804.928313,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_workflow_definition():\n        \"\"\"Priority 3: Check workflow definition.\"\"\"\n        with open(WORKFLOW_FILE, \"r\") as f:\n            content = f.read()\n    \n        assert \"dynamic-email\" in content, \"Expected 'dynamic-email' workflow name in workflow.ts\"\n        assert \"orderId\" in content, \"Expected 'orderId' in workflow.ts\"\n        assert \"customerName\" in content, \"Expected 'customerName' in workflow.ts\"\n        assert \"z.object\" in content or \"zod.object\" in content, \"Expected Zod schema in workflow.ts\"\n    \n        # Check dynamic subject\n>       assert \"payload.orderId\" in content, \"Expected payload.orderId to be used in subject\"\nE       AssertionError: Expected payload.orderId to be used in subject\nE       assert 'payload.orderId' in 'import { workflow } from \"@novu/framework\";\\nimport { z } from \"zod\";\\n\\nexport const dynamicEmailWorkflow = workflow...       subject: `Order ${orderId} confirmed for ${customerName}`,\\n        body: \"Hello\",\\n      },\\n    };\\n  }\\n);\\n'\n\ntests/test_final_state.py:77: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

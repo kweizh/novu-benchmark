@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1778930503.3966458,
+            "stop": 1778930505.4613495
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_api_novu_endpoint",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 2.0403187049087137,
+                "start": 1778930503.4087882,
+                "stop": 1778930505.460834,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "start_app = None\n\n    def test_api_novu_endpoint(start_app):\n        url = \"http://localhost:3000/api/novu?action=discover\"\n        req = urllib.request.Request(url)\n        try:\n            with urllib.request.urlopen(req) as response:\n                assert response.status == 200, f\"Expected status 200, got {response.status}\"\n                data = json.loads(response.read().decode('utf-8'))\n        except Exception as e:\n            pytest.fail(f\"Failed to fetch {url}: {e}\")\n    \n        assert \"workflows\" in data, \"Expected 'workflows' array in the response.\"\n        workflows = data[\"workflows\"]\n    \n        slack_workflow = next((w for w in workflows if w.get(\"workflowId\") == \"slack-notification\"), None)\n        assert slack_workflow is not None, \"Workflow 'slack-notification' not found in the registered workflows.\"\n    \n        steps = slack_workflow.get(\"steps\", [])\n        chat_step = next((s for s in steps if s.get(\"stepId\") == \"send-to-slack\"), None)\n    \n>       assert chat_step is not None, \"Step 'send-to-slack' not found in the workflow steps.\"\nE       AssertionError: Step 'send-to-slack' not found in the workflow steps.\nE       assert None is not None\n\ntests/test_final_state.py:64: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

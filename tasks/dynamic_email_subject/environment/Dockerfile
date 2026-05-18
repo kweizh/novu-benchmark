@@ -8,6 +8,9 @@ RUN apt-get update -y && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
+RUN npm install -g zod zod-to-json-schema
+ENV NODE_PATH=/usr/lib/node_modules
+
 RUN mkdir -p /home/user && chmod 0755 /home/user
 
 LABEL Author="any-task-builder"

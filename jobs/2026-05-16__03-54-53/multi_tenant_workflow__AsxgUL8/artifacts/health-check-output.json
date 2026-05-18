@@ -1,0 +1,9 @@
+{
+  "status": "ok",
+  "sdkVersion": "2.10.0",
+  "frameworkVersion": "2024-06-26",
+  "discovered": {
+    "workflows": 1,
+    "steps": 1
+  }
+}

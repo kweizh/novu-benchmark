@@ -1,0 +1,38 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 2,
+            "passed": 2,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1778910517.4376976,
+            "stop": 1778910518.5041308
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_endpoint_mounted",
+                "status": "passed",
+                "duration": 1.0299163619056344,
+                "start": 1778910517.463963,
+                "stop": 1778910518.4949064,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_hmac_verification_enforced",
+                "status": "passed",
+                "duration": 0.008094251155853271,
+                "start": 1778910518.495129,
+                "stop": 1778910518.5035067,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            }
+        ]
+    }
+}

@@ -1,0 +1,88 @@
+Running command: apt-get update && apt-get install -y curl ripgrep
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.8 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Running command: echo workflow_error_handling__Qqt4dHg > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" -e "s/ANTHROPIC_API_KEY/${ANTHROPIC_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "anthropic": {
+      "kind": "openai",
+      "baseURL": "https://api.anthropic.com/v1",
+      "apiKey": "ANTHROPIC_API_KEY",
+      "models": {
+        "claude-opus-4-6": {
+          "name": "claude-opus-4-6"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: mkdir -p /logs/artifacts
+Command outputs captured
+Running command: export PATH="$HOME/.pochi/bin:$PATH"; pochi --model zai/glm-4.7 --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Preserving your work
+
+Save a copy of files you create during this task to `/logs/artifacts/`. This directory is preserved after the run so outputs can be inspected. Organize with subdirectories if helpful (e.g., `/logs/artifacts/code/`, `/logs/artifacts/reports/`). The directory already exists and is writable.
+
+---
+
+# Novu Workflow Error Handling
+
+## Background
+Novu provides a code-first framework for defining notification workflows. It supports payload validation using Zod and allows you to write custom code in custom steps. This task focuses on implementing a workflow that validates its payload and correctly surfaces errors from custom steps.
+
+## Requirements
+- Create an Express.js application that serves a Novu Bridge endpoint.
+- Define a Novu workflow named `error-handling-workflow`.
+- The workflow must use a Zod schema for payload validation, requiring `userId` (string) and `simulateError` (boolean, defaults to false).
+- Implement a custom step named `fetch-data`. If `payload.simulateError` is true, the step must throw an `Error` with the message `"External API Failed"`. If false, it returns `{ status: "ok" }`.
+- Implement an `email` step named `send-email` that sends an email with the subject `"Process Complete"` and a body containing the status from the custom step.
+
+## Implementation Guide
+1. Initialize a Node.js project in `/home/user/novu-app`.
+2. Install `express`, `@novu/framework`, and `zod`.
+3. Create `index.js`.
+4. Define the workflow using the `@novu/framework` `workflow` function.
+5. Set up an Express server and mount the Novu Bridge using the `serve` function from `@novu/framework/express` at the `/api/novu` route.
+6. Ensure the server listens on port 3000.
+
+## Constraints
+- Project path: `/home/user/novu-app`
+- Start command: `node index.js`
+- Port: 3000
+EOF
+Command outputs captured
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured

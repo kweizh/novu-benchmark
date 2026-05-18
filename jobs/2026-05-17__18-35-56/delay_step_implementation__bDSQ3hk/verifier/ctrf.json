@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779068740.3246136,
+            "stop": 1779068745.5238647
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_workflows_discovered",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 5.080149951972999,
+                "start": 1779068740.336577,
+                "stop": 1779068745.5229332,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "start_app = None\n\n    def test_workflows_discovered(start_app):\n        url = \"http://localhost:3000/api/novu?action=discover\"\n        try:\n            req = urllib.request.Request(url)\n>           with urllib.request.urlopen(req) as response:\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\ntests/test_final_state.py:50: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nusr/lib/python3.12/urllib/request.py:215: in urlopen\n    return opener.open(url, data, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nusr/lib/python3.12/urllib/request.py:521: in open\n    response = meth(req, response)\n               ^^^^^^^^^^^^^^^^^^^\nusr/lib/python3.12/urllib/request.py:630: in http_response\n    response = self.parent.error(\nusr/lib/python3.12/urllib/request.py:559: in error\n    return self._call_chain(*args)\n           ^^^^^^^^^^^^^^^^^^^^^^^\nusr/lib/python3.12/urllib/request.py:492: in _call_chain\n    result = func(*args)\n             ^^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <urllib.request.HTTPDefaultErrorHandler object at 0xf59e69edf3b0>\nreq = <urllib.request.Request object at 0xf59e69edf620>\nfp = <http.client.HTTPResponse object at 0xf59e69ee8640>, code = 500\nmsg = 'Internal Server Error'\nhdrs = <http.client.HTTPMessage object at 0xf59e69bc35f0>\n\n    def http_error_default(self, req, fp, code, msg, hdrs):\n>       raise HTTPError(req.full_url, code, msg, hdrs, fp)\nE       urllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nusr/lib/python3.12/urllib/request.py:639: HTTPError\n\nDuring handling of the above exception, another exception occurred:\n\nstart_app = None\n\n    def test_workflows_discovered(start_app):\n        url = \"http://localhost:3000/api/novu?action=discover\"\n        try:\n            req = urllib.request.Request(url)\n            with urllib.request.urlopen(req) as response:\n                assert response.getcode() == 200, f\"Expected status code 200, got {response.getcode()}\"\n                data = json.loads(response.read().decode())\n        except urllib.error.URLError as e:\n>           pytest.fail(f\"Failed to connect to the bridge endpoint: {e}\")\nE           Failed: Failed to connect to the bridge endpoint: HTTP Error 500: Internal Server Error\n\ntests/test_final_state.py:54: Failed",
+                "message": "The test failed in the call phase"
+            }
+        ]
+    }
+}

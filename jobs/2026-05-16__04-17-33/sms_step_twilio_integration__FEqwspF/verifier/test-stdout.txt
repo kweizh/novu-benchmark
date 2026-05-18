@@ -1,0 +1,73 @@
+downloading uv 0.9.7 aarch64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Downloading pygments (1.2MiB)
+ Downloading pygments
+Installed 7 packages in 11ms
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collected 5 items
+
+tests/test_final_state.py ..FFF                                          [100%]
+
+=================================== FAILURES ===================================
+_____________________ test_workflow_file_exports_sms_alert _____________________
+
+    def test_workflow_file_exports_sms_alert():
+        workflows_path = os.path.join(PROJECT_DIR, "app/api/novu/workflows.ts")
+>       assert os.path.isfile(workflows_path), f"Workflow file not found at {workflows_path}"
+E       AssertionError: Workflow file not found at /home/user/novu-app/app/api/novu/workflows.ts
+E       assert False
+E        +  where False = <function isfile at 0xfe7e3f920220>('/home/user/novu-app/app/api/novu/workflows.ts')
+E        +    where <function isfile at 0xfe7e3f920220> = <module 'posixpath' (frozen)>.isfile
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+tests/test_final_state.py:60: AssertionError
+_______________________ test_route_file_exports_handlers _______________________
+
+    def test_route_file_exports_handlers():
+        route_path = os.path.join(PROJECT_DIR, "app/api/novu/route.ts")
+>       assert os.path.isfile(route_path), f"Route file not found at {route_path}"
+E       AssertionError: Route file not found at /home/user/novu-app/app/api/novu/route.ts
+E       assert False
+E        +  where False = <function isfile at 0xfe7e3f920220>('/home/user/novu-app/app/api/novu/route.ts')
+E        +    where <function isfile at 0xfe7e3f920220> = <module 'posixpath' (frozen)>.isfile
+E        +      where <module 'posixpath' (frozen)> = os.path
+
+tests/test_final_state.py:70: AssertionError
+_______________________ test_bridge_endpoint_responding ________________________
+
+start_app = None
+
+    def test_bridge_endpoint_responding(start_app):
+        result = subprocess.run(
+            ["curl", "-s", "-o", "/dev/null", "-w", "%{http_code}", "http://localhost:3000/api/novu"],
+            capture_output=True, text=True
+        )
+        assert result.returncode == 0, f"curl request failed: {result.stderr}"
+        # Next.js might return 200 or 405 or 400 depending on the endpoint configuration,
+        # but it should respond and not be 404.
+        http_code = result.stdout.strip()
+>       assert http_code != "404", "Bridge endpoint returned 404, expected it to be registered."
+E       AssertionError: Bridge endpoint returned 404, expected it to be registered.
+E       assert '404' != '404'
+
+tests/test_final_state.py:88: AssertionError
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED tests/test_final_state.py::test_project_exists
+PASSED tests/test_final_state.py::test_dependencies_installed
+FAILED tests/test_final_state.py::test_workflow_file_exports_sms_alert - Asse...
+FAILED tests/test_final_state.py::test_route_file_exports_handlers - Assertio...
+FAILED tests/test_final_state.py::test_bridge_endpoint_responding - Assertion...
+========================= 3 failed, 2 passed in 7.29s ==========================

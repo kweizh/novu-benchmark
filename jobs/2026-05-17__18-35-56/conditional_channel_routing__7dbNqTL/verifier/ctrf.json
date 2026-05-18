@@ -1,0 +1,41 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 2,
+            "passed": 1,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779068604.178951,
+            "stop": 1779068605.615203
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_api_endpoint_responds",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 1.3585934230359271,
+                "start": 1779068604.190398,
+                "stop": 1779068605.6063292,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "start_app = None\n\n    def test_api_endpoint_responds(start_app):\n        \"\"\"Verify that the /api/novu endpoint is accessible.\"\"\"\n        try:\n            req = urllib.request.Request(\"http://localhost:3000/api/novu\", method=\"GET\")\n>           response = urllib.request.urlopen(req)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\ntests/test_final_state.py:51: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nusr/lib/python3.12/urllib/request.py:215: in urlopen\n    return opener.open(url, data, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nusr/lib/python3.12/urllib/request.py:521: in open\n    response = meth(req, response)\n               ^^^^^^^^^^^^^^^^^^^\nusr/lib/python3.12/urllib/request.py:630: in http_response\n    response = self.parent.error(\nusr/lib/python3.12/urllib/request.py:559: in error\n    return self._call_chain(*args)\n           ^^^^^^^^^^^^^^^^^^^^^^^\nusr/lib/python3.12/urllib/request.py:492: in _call_chain\n    result = func(*args)\n             ^^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <urllib.request.HTTPDefaultErrorHandler object at 0xf0c0e911e450>\nreq = <urllib.request.Request object at 0xf0c0e9c090a0>\nfp = <http.client.HTTPResponse object at 0xf0c0e910df00>, code = 500\nmsg = 'Internal Server Error'\nhdrs = <http.client.HTTPMessage object at 0xf0c0e8df38c0>\n\n    def http_error_default(self, req, fp, code, msg, hdrs):\n>       raise HTTPError(req.full_url, code, msg, hdrs, fp)\nE       urllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nusr/lib/python3.12/urllib/request.py:639: HTTPError\n\nDuring handling of the above exception, another exception occurred:\n\nstart_app = None\n\n    def test_api_endpoint_responds(start_app):\n        \"\"\"Verify that the /api/novu endpoint is accessible.\"\"\"\n        try:\n            req = urllib.request.Request(\"http://localhost:3000/api/novu\", method=\"GET\")\n            response = urllib.request.urlopen(req)\n            assert response.status in [200, 400, 404, 405], f\"Unexpected status code: {response.status}\"\n        except urllib.error.HTTPError as e:\n            # Novu framework might return 400 or 405 for a plain GET without correct headers, which is fine\n>           assert e.code in [400, 404, 405], f\"Expected endpoint to be active, got HTTP {e.code}\"\nE           AssertionError: Expected endpoint to be active, got HTTP 500\nE           assert 500 in [400, 404, 405]\nE            +  where 500 = <HTTPError 500: 'Internal Server Error'>.code\n\ntests/test_final_state.py:55: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_final_state.py::test_skip_logic_implemented",
+                "status": "passed",
+                "duration": 0.003971665981225669,
+                "start": 1779068605.606505,
+                "stop": 1779068605.6106439,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            }
+        ]
+    }
+}

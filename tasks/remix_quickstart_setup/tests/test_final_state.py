@@ -49,12 +49,19 @@ def test_env_file_exists():
 
 @pytest.fixture(scope="module")
 def start_app():
-    # Start the app
+    # Stream stdout/stderr to files so a hang/crash leaves a diagnostic trail
+    # in /logs/verifier/. Using PIPE here without draining can fill the OS pipe
+    # buffer (~64 KB) and block Vite's logger, masking the real failure.
+    log_dir = "/logs/verifier"
+    os.makedirs(log_dir, exist_ok=True)
+    stdout_f = open(os.path.join(log_dir, "remix-dev-stdout.log"), "wb")
+    stderr_f = open(os.path.join(log_dir, "remix-dev-stderr.log"), "wb")
+
     process = subprocess.Popen(
         ["npm", "run", "dev"],
         cwd=PROJECT_DIR,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
+        stdout=stdout_f,
+        stderr=stderr_f,
         preexec_fn=os.setsid
     )
 
@@ -62,7 +69,12 @@ def start_app():
     if not wait_for_port(5173):
         import signal
         os.killpg(os.getpgid(process.pid), signal.SIGTERM)
-        pytest.fail("App failed to start and listen on port 5173.")
+        stdout_f.close()
+        stderr_f.close()
+        pytest.fail(
+            "App failed to start and listen on port 5173. "
+            "See /logs/verifier/remix-dev-{stdout,stderr}.log for the dev-server output."
+        )
 
     yield
 
@@ -70,6 +82,8 @@ def start_app():
     import signal
     os.killpg(os.getpgid(process.pid), signal.SIGTERM)
     process.wait(timeout=30)
+    stdout_f.close()
+    stderr_f.close()
 
 def test_api_endpoint_reachable(start_app):
     try:

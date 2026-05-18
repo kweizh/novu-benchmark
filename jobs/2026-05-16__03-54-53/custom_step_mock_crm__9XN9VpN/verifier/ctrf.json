@@ -1,0 +1,47 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 3,
+            "passed": 3,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1778929261.372852,
+            "stop": 1778929261.42177
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_crm_endpoint",
+                "status": "passed",
+                "duration": 0.020832177018746734,
+                "start": 1778929261.3825364,
+                "stop": 1778929261.405113,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_novu_bridge_endpoint",
+                "status": "passed",
+                "duration": 0.00988967705052346,
+                "start": 1778929261.4053183,
+                "stop": 1778929261.4154801,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_index_js_contents",
+                "status": "passed",
+                "duration": 0.005763759952969849,
+                "start": 1778929261.4156,
+                "stop": 1778929261.4215238,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            }
+        ]
+    }
+}

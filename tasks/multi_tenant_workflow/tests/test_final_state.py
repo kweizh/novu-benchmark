@@ -48,7 +48,7 @@ def start_app():
 def test_novu_bridge_endpoint(start_app):
     """Priority 1: Test the Novu bridge endpoint response."""
     try:
-        req = urllib.request.Request("http://localhost:3000/api/novu", method="GET")
+        req = urllib.request.Request("http://localhost:3000/api/novu?action=discover", method="GET")
         with urllib.request.urlopen(req) as response:
             assert response.getcode() == 200, f"Expected status code 200, got {response.getcode()}"
             data = json.loads(response.read().decode())

@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779068719.2127626,
+            "stop": 1779068723.3967717
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_express_app_and_novu_endpoint",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 4.0297058038413525,
+                "start": 1779068719.3459554,
+                "stop": 1779068723.3964663,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_express_app_and_novu_endpoint():\n        project_path = \"/home/user/myproject\"\n        assert os.path.exists(project_path), f\"Project directory {project_path} does not exist\"\n    \n        # Start the server\n        process = subprocess.Popen(\n            [\"node\", \"index.js\"],\n            cwd=project_path,\n            stdout=subprocess.PIPE,\n            stderr=subprocess.PIPE\n        )\n    \n        try:\n            # Wait for the server to start\n            time.sleep(4)\n    \n            # Test the endpoint\n            response = requests.get(\"http://localhost:3000/api/novu\")\n>           assert response.status_code == 200, f\"Expected status code 200, but got {response.status_code}\"\nE           AssertionError: Expected status code 200, but got 500\nE           assert 500 == 200\nE            +  where 500 = <Response [500]>.status_code\n\n/tests/test_final_state.py:25: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

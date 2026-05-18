@@ -1,0 +1,1591 @@
+Running command: apt-get update && apt-get install -y curl ripgrep
+Running command: apt-get update && apt-get install -y curl ripgrep
+Running command: apt-get update && apt-get install -y curl ripgrep
+Running command: apt-get update && apt-get install -y curl ripgrep
+Running command: apt-get update && apt-get install -y curl ripgrep
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.8 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.8 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.8 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Running command: echo hmac_security_express__PgodXR2 > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" -e "s/ANTHROPIC_API_KEY/${ANTHROPIC_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "anthropic": {
+      "kind": "openai",
+      "baseURL": "https://api.anthropic.com/v1",
+      "apiKey": "ANTHROPIC_API_KEY",
+      "models": {
+        "claude-opus-4-6": {
+          "name": "claude-opus-4-6"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: mkdir -p /logs/artifacts
+Command outputs captured
+Running command: export PATH="$HOME/.pochi/bin:$PATH"; pochi --model google/gemini-3.1-pro --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Preserving your work
+
+Save a copy of files you create during this task to `/logs/artifacts/`. This directory is preserved after the run so outputs can be inspected. Organize with subdirectories if helpful (e.g., `/logs/artifacts/code/`, `/logs/artifacts/reports/`). The directory already exists and is writable.
+
+---
+
+# Secure Novu Bridge Endpoint in Express.js
+
+## Background
+Novu Framework allows you to define workflows in your code and expose them via a Bridge Endpoint. In production, this endpoint must be secured using HMAC verification to ensure only Novu Cloud can trigger your workflows.
+
+## Requirements
+- Initialize a Node.js Express application.
+- Create a Novu workflow named `test-workflow` that sends an email.
+- Expose this workflow via a Novu Bridge Endpoint at `/api/novu`.
+- Configure the application to run in production mode (`NODE_ENV=production`) so that HMAC verification is enforced by default.
+- Use `NOVU_SECRET_KEY` from the environment for HMAC verification.
+
+## Implementation Guide
+1. Initialize a new Node.js project in `/home/user/app`.
+2. Install `express` and `@novu/framework`.
+3. Create `index.js` that sets up an Express server listening on port 3000.
+4. Define a workflow using `@novu/framework` and expose it at `/api/novu` using the `serve` function from `@novu/framework/express`.
+5. Start the server using the command `npm start` which should execute `NODE_ENV=production node index.js`.
+
+## Constraints
+- Project path: /home/user/app
+- Start command: npm start
+- Port: 3000
+- The server must read `NOVU_SECRET_KEY` from the environment.
+EOF
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.8 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.8 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Running command: echo subscriber_attributes_filtering__4Jmfnp2 > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" -e "s/ANTHROPIC_API_KEY/${ANTHROPIC_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "anthropic": {
+      "kind": "openai",
+      "baseURL": "https://api.anthropic.com/v1",
+      "apiKey": "ANTHROPIC_API_KEY",
+      "models": {
+        "claude-opus-4-6": {
+          "name": "claude-opus-4-6"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Running command: echo novu_payload_default__N5HqyiW > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p /logs/artifacts
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" -e "s/ANTHROPIC_API_KEY/${ANTHROPIC_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "anthropic": {
+      "kind": "openai",
+      "baseURL": "https://api.anthropic.com/v1",
+      "apiKey": "ANTHROPIC_API_KEY",
+      "models": {
+        "claude-opus-4-6": {
+          "name": "claude-opus-4-6"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: export PATH="$HOME/.pochi/bin:$PATH"; pochi --model google/gemini-3.1-pro --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Preserving your work
+
+Save a copy of files you create during this task to `/logs/artifacts/`. This directory is preserved after the run so outputs can be inspected. Organize with subdirectories if helpful (e.g., `/logs/artifacts/code/`, `/logs/artifacts/reports/`). The directory already exists and is writable.
+
+---
+
+# Novu Workflow with Conditional Skip
+
+## Background
+Using the `@novu/framework`, create a workflow that selectively sends notifications based on the payload attributes. This simulates sending a premium SMS only to premium subscribers.
+
+## Requirements
+- Initialize a Node.js project in `/home/user/novu-project`.
+- Install `@novu/framework` and `zod`.
+- Create an `index.ts` file that exports a workflow named `premiumNotification`.
+- The workflow must have the ID `premium-notification`.
+- Define a payload schema using `zod` with an `isPremium` boolean property (default `false`).
+- The workflow should have an `inApp` step (stepId: `notify-in-app`) that always runs.
+- The workflow should have an `sms` step (stepId: `notify-sms`) that sends an SMS with the body "Premium features unlocked!".
+- The `sms` step must use the `skip` function to skip execution if `payload.isPremium` is `false`.
+
+## Implementation Guide
+1. `mkdir -p /home/user/novu-project && cd /home/user/novu-project`
+2. Initialize a new project with `npm init -y`.
+3. Install dependencies: `npm install @novu/framework zod typescript @types/node`.
+4. Create `index.ts` and implement the workflow as described.
+
+## Constraints
+- Project path: `/home/user/novu-project`
+- Use TypeScript for `index.ts`.
+EOF
+Command outputs captured
+Running command: mkdir -p /logs/artifacts
+Command outputs captured
+Running command: export PATH="$HOME/.pochi/bin:$PATH"; pochi --model google/gemini-3.1-pro --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Preserving your work
+
+Save a copy of files you create during this task to `/logs/artifacts/`. This directory is preserved after the run so outputs can be inspected. Organize with subdirectories if helpful (e.g., `/logs/artifacts/code/`, `/logs/artifacts/reports/`). The directory already exists and is writable.
+
+---
+
+# Novu Payload Default Values
+
+## Background
+Novu allows you to define payload schemas for your workflows using Zod. You can specify default values for fields in the payload schema, which are used if the trigger does not provide them.
+
+## Requirements
+- You have a Node.js project initialized in `/home/user/project`.
+- Create a file `src/novu/workflows.ts` that exports a Novu workflow named `welcome-user`.
+- The workflow must have a payload schema defined using `zod`.
+- The schema must have a field `userName` of type string with a default value of `'Guest'`.
+- The workflow should contain an email step named `send-email` that uses `payload.userName` in its subject.
+
+## Implementation Guide
+1. Navigate to `/home/user/project`.
+2. Create the file `src/novu/workflows.ts`.
+3. Import `workflow` from `@novu/framework` and `z` from `zod`.
+4. Define and export the `welcomeUser` workflow.
+5. In the workflow options, define `payloadSchema` with `z.object({ userName: z.string().default('Guest') })`.
+6. Add an `email` step to the workflow that sets the subject to something like `Welcome, ${payload.userName}!`.
+
+## Constraints
+- Project path: /home/user/project
+- The workflow ID must be `welcome-user`.
+- The exported workflow variable should be named `welcomeUser`.
+EOF
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Running command: echo express_bridge_setup__Lij45E5 > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" -e "s/ANTHROPIC_API_KEY/${ANTHROPIC_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "anthropic": {
+      "kind": "openai",
+      "baseURL": "https://api.anthropic.com/v1",
+      "apiKey": "ANTHROPIC_API_KEY",
+      "models": {
+        "claude-opus-4-6": {
+          "name": "claude-opus-4-6"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: mkdir -p /logs/artifacts
+Command outputs captured
+Running command: export PATH="$HOME/.pochi/bin:$PATH"; pochi --model google/gemini-3.1-pro --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Preserving your work
+
+Save a copy of files you create during this task to `/logs/artifacts/`. This directory is preserved after the run so outputs can be inspected. Organize with subdirectories if helpful (e.g., `/logs/artifacts/code/`, `/logs/artifacts/reports/`). The directory already exists and is writable.
+
+---
+
+# Novu Express Bridge Setup
+
+## Background
+Set up a Novu Bridge Endpoint in an Express.js application to connect your code to Novu Cloud.
+
+## Requirements
+- Initialize a Node.js project in `/home/user/myproject`.
+- Install `express` and `@novu/framework`.
+- Create a workflow file `workflows.js` that defines a workflow named `test-workflow` which sends an email with the subject 'Test Email' and body 'This is a test email from Novu Framework!'.
+- Create an `index.js` file that sets up an Express server on port 3000.
+- Configure the server to parse JSON (`express.json()`) and mount the Novu Bridge Endpoint at `/api/novu` using the `serve` function from `@novu/framework/express`, passing the `test-workflow`.
+
+## Implementation Guide
+1. Run `npm init -y` in `/home/user/myproject`.
+2. Run `npm install express @novu/framework`.
+3. Create `workflows.js`:
+```javascript
+const { workflow } = require('@novu/framework');
+
+const testWorkflow = workflow('test-workflow', async ({ step }) => {
+  await step.email('test-email', async () => {
+    return {
+      subject: 'Test Email',
+      body: 'This is a test email from Novu Framework!',
+    };
+  });
+});
+
+module.exports = { testWorkflow };
+```
+4. Create `index.js`:
+```javascript
+const express = require('express');
+const { serve } = require('@novu/framework/express');
+const { testWorkflow } = require('./workflows');
+
+const app = express();
+app.use(express.json());
+app.use('/api/novu', serve({ workflows: [testWorkflow] }));
+
+app.listen(3000, () => console.log('Listening on port 3000'));
+```
+
+## Constraints
+- Project path: `/home/user/myproject`
+- Start command: `node index.js`
+- Port: 3000
+- Do not use TypeScript, use plain JavaScript (CommonJS) as shown in the guide.
+EOF
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Running command: echo remix_quickstart_setup__o3Eu4ux > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" -e "s/ANTHROPIC_API_KEY/${ANTHROPIC_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "anthropic": {
+      "kind": "openai",
+      "baseURL": "https://api.anthropic.com/v1",
+      "apiKey": "ANTHROPIC_API_KEY",
+      "models": {
+        "claude-opus-4-6": {
+          "name": "claude-opus-4-6"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: mkdir -p /logs/artifacts
+Command outputs captured
+Running command: export PATH="$HOME/.pochi/bin:$PATH"; pochi --model google/gemini-3.1-pro --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Preserving your work
+
+Save a copy of files you create during this task to `/logs/artifacts/`. This directory is preserved after the run so outputs can be inspected. Organize with subdirectories if helpful (e.g., `/logs/artifacts/code/`, `/logs/artifacts/reports/`). The directory already exists and is writable.
+
+---
+
+# Setup Novu Framework in a Remix Application
+
+## Background
+You have a basic Remix application. You need to integrate the Novu Framework to handle notifications by adding a Novu API endpoint and a test workflow.
+
+## Requirements
+- Install `@novu/framework` in the Remix application.
+- Create a Novu workflow definition in `app/novu/workflows.ts` that defines a `test-workflow` with an email step.
+- Create a Remix route at `app/routes/api.novu.ts` (which maps to `/api/novu`) that serves the Novu endpoint using the `test-workflow`.
+- Add `NOVU_SECRET_KEY=your_secret_key` to a `.env` file in the project root.
+
+## Implementation Guide
+1. Navigate to `/home/user/my-novu-app`.
+2. Install `@novu/framework` using npm.
+3. Create `app/novu/workflows.ts` with a basic workflow named `test-workflow`.
+4. Create `app/routes/api.novu.ts` and use `serve` from `@novu/framework/remix` to export `action` and `loader`.
+5. Create a `.env` file with `NOVU_SECRET_KEY=your_secret_key`.
+
+## Constraints
+- Project path: /home/user/my-novu-app
+- Start command: npm run dev
+- Port: 5173
+EOF
+Command outputs captured
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured
+The verifier.env contains an API key (often the case for LLM-based verifiers). You will incur costs associated with the API calls.
+The verifier.env contains an API key (often the case for LLM-based verifiers). You will incur costs associated with the API calls.
+Command outputs captured
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured
+The verifier.env contains an API key (often the case for LLM-based verifiers). You will incur costs associated with the API calls.
+The verifier.env contains an API key (often the case for LLM-based verifiers). You will incur costs associated with the API calls.
+Running command: apt-get update && apt-get install -y curl ripgrep
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.8 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Running command: echo custom_step_mock_crm__mA6AmHn > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" -e "s/ANTHROPIC_API_KEY/${ANTHROPIC_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "anthropic": {
+      "kind": "openai",
+      "baseURL": "https://api.anthropic.com/v1",
+      "apiKey": "ANTHROPIC_API_KEY",
+      "models": {
+        "claude-opus-4-6": {
+          "name": "claude-opus-4-6"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: mkdir -p /logs/artifacts
+Command outputs captured
+Running command: export PATH="$HOME/.pochi/bin:$PATH"; pochi --model google/gemini-3.1-pro --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Preserving your work
+
+Save a copy of files you create during this task to `/logs/artifacts/`. This directory is preserved after the run so outputs can be inspected. Organize with subdirectories if helpful (e.g., `/logs/artifacts/code/`, `/logs/artifacts/reports/`). The directory already exists and is writable.
+
+---
+
+# Novu Custom Step with Mock CRM
+
+## Background
+You have an Express.js application that serves as both a mock CRM and a Novu Bridge. Novu provides a `step.custom` feature that allows workflows to fetch external data and use it in subsequent steps. Your task is to implement a Novu workflow that uses `step.custom` to fetch user details from a mock CRM API and then sends an email notification using that data.
+
+## Requirements
+1. Initialize an Express.js project in `/home/user/app`.
+2. Install `@novu/framework`, `@novu/node`, `express`, and `zod`.
+3. Create an Express server in `/home/user/app/index.js` running on port 3000.
+4. Create a mock CRM endpoint `GET /api/crm/users/:id` that returns a JSON object `{ "name": "Alice", "company": "Acme Corp" }` for any ID.
+5. Define a Novu workflow named `crm-notification` with a payload schema requiring `userId` (string).
+6. In the workflow, add a `step.custom` named `fetch-crm-data` that makes an HTTP GET request (e.g., using `fetch`) to `http://localhost:3000/api/crm/users/${payload.userId}` and returns the JSON response. Define the `outputSchema` for the custom step to expect `name` and `company` as strings.
+7. Add a `step.email` named `send-email` that uses the data returned from the custom step. The email subject should be `"Welcome to ${company}!"` and the body should be `"Hello ${name}, welcome to ${company}."`.
+8. Serve the Novu workflow at `/api/novu` using the Express adapter from `@novu/framework/express`.
+
+## Implementation Guide
+1. Run `npm init -y` and `npm install express @novu/framework @novu/node zod`.
+2. In `index.js`, use `express.json()` middleware.
+3. Implement the `GET /api/crm/users/:id` route.
+4. Implement the Novu workflow using `workflow`, `step.custom`, and `step.email`.
+5. Use `serve` from `@novu/framework/express` to mount the workflow at `/api/novu`.
+6. Start the server with `node index.js`.
+
+## Constraints
+- Project path: `/home/user/app`
+- Start command: `node index.js`
+- Port: 3000
+- The custom step must make a real HTTP request to the mock CRM endpoint.
+
+## Integrations
+- None
+EOF
+Running command: apt-get update && apt-get install -y curl ripgrep
+Command outputs captured
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured
+The verifier.env contains an API key (often the case for LLM-based verifiers). You will incur costs associated with the API calls.
+The verifier.env contains an API key (often the case for LLM-based verifiers). You will incur costs associated with the API calls.
+Running command: apt-get update && apt-get install -y curl ripgrep
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.8 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.8 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Running command: echo chat_step_slack_integration__apiAVsZ > /logs/artifacts/trial_id
+Command outputs captured
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" -e "s/ANTHROPIC_API_KEY/${ANTHROPIC_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "anthropic": {
+      "kind": "openai",
+      "baseURL": "https://api.anthropic.com/v1",
+      "apiKey": "ANTHROPIC_API_KEY",
+      "models": {
+        "claude-opus-4-6": {
+          "name": "claude-opus-4-6"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+The verifier.env contains an API key (often the case for LLM-based verifiers). You will incur costs associated with the API calls.
+The verifier.env contains an API key (often the case for LLM-based verifiers). You will incur costs associated with the API calls.
+Command outputs captured
+Running command: mkdir -p /logs/artifacts
+Command outputs captured
+Running command: export PATH="$HOME/.pochi/bin:$PATH"; pochi --model google/gemini-3.1-pro --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Preserving your work
+
+Save a copy of files you create during this task to `/logs/artifacts/`. This directory is preserved after the run so outputs can be inspected. Organize with subdirectories if helpful (e.g., `/logs/artifacts/code/`, `/logs/artifacts/reports/`). The directory already exists and is writable.
+
+---
+
+# Novu Chat Step Slack Integration
+
+## Background
+Create an Express.js application that serves a Novu Bridge Endpoint containing a workflow. The workflow should use the Chat step to send a notification, specifically simulating a Slack integration.
+
+## Requirements
+- Initialize a Node.js project in `/home/user/myproject`.
+- Install `express` and `@novu/framework`.
+- Create a workflow named `slack-notification`.
+- The workflow must contain a chat step with the ID `send-to-slack`.
+- The chat step must return a `body` with the text `"Hello from Novu!"`.
+- Configure an Express server to serve the Novu endpoint at `/api/novu`.
+- The Express server must listen on port 3000.
+
+## Implementation Guide
+1. Run `npm init -y` in `/home/user/myproject`.
+2. Install the required packages: `npm install express @novu/framework`.
+3. Create a `novu/workflows.js` file and define the `slack-notification` workflow using `@novu/framework`.
+4. Create an `index.js` file to set up the Express server and serve the workflow at `/api/novu` using `serve` from `@novu/framework/express`.
+
+## Constraints
+- Project path: `/home/user/myproject`
+- Start command: `node index.js`
+- Port: 3000
+- The workflow must be exported so it can be served.
+
+## Integrations
+- None
+EOF
+Command outputs captured
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+The verifier.env contains an API key (often the case for LLM-based verifiers). You will incur costs associated with the API calls.
+The verifier.env contains an API key (often the case for LLM-based verifiers). You will incur costs associated with the API calls.
+Command outputs captured
+Running command: echo email_push_multi_channel__cYAgJue > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" -e "s/ANTHROPIC_API_KEY/${ANTHROPIC_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "anthropic": {
+      "kind": "openai",
+      "baseURL": "https://api.anthropic.com/v1",
+      "apiKey": "ANTHROPIC_API_KEY",
+      "models": {
+        "claude-opus-4-6": {
+          "name": "claude-opus-4-6"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: mkdir -p /logs/artifacts
+Command outputs captured
+Running command: export PATH="$HOME/.pochi/bin:$PATH"; pochi --model google/gemini-3.1-pro --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Preserving your work
+
+Save a copy of files you create during this task to `/logs/artifacts/`. This directory is preserved after the run so outputs can be inspected. Organize with subdirectories if helpful (e.g., `/logs/artifacts/code/`, `/logs/artifacts/reports/`). The directory already exists and is writable.
+
+---
+
+# Multi-Channel Novu Workflow with Express
+
+## Background
+Novu provides a code-first framework to define notification workflows. You need to create a simple Express application that serves a Novu workflow with multiple channels (in-app and email).
+
+## Requirements
+- Initialize an Express application in `/home/user/novu-app`.
+- Install `express` and `@novu/framework`.
+- Create an `index.js` file that sets up an Express server.
+- Define a workflow named `welcome-user` using `workflow` from `@novu/framework`.
+- The workflow must include an `inApp` step named `notify-in-app` and an `email` step named `send-email`.
+- Serve the workflow at the `/api/novu` endpoint using `serve` from `@novu/framework/express`.
+- The server should listen on port 3000.
+
+## Constraints
+- Project path: `/home/user/novu-app`
+- Start command: `node index.js`
+- Port: 3000
+- Ensure `express.json()` middleware is used before the Novu endpoint.
+EOF
+Command failed
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured
+The verifier.env contains an API key (often the case for LLM-based verifiers). You will incur costs associated with the API calls.
+The verifier.env contains an API key (often the case for LLM-based verifiers). You will incur costs associated with the API calls.
+Running command: apt-get update && apt-get install -y curl ripgrep
+Running command: apt-get update && apt-get install -y curl ripgrep
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.8 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Exception NonZeroAgentExitCodeError is not in include_exceptions, not retrying
+Not retrying trial because the exception is not in include_exceptions or the maximum number of retries has been reached
+Running command: apt-get update && apt-get install -y curl ripgrep
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.8 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured
+The verifier.env contains an API key (often the case for LLM-based verifiers). You will incur costs associated with the API calls.
+The verifier.env contains an API key (often the case for LLM-based verifiers). You will incur costs associated with the API calls.
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.8 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Running command: echo conditional_channel_routing__VzVcPER > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" -e "s/ANTHROPIC_API_KEY/${ANTHROPIC_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "anthropic": {
+      "kind": "openai",
+      "baseURL": "https://api.anthropic.com/v1",
+      "apiKey": "ANTHROPIC_API_KEY",
+      "models": {
+        "claude-opus-4-6": {
+          "name": "claude-opus-4-6"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: mkdir -p /logs/artifacts
+Command outputs captured
+Running command: export PATH="$HOME/.pochi/bin:$PATH"; pochi --model google/gemini-3.1-pro --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Preserving your work
+
+Save a copy of files you create during this task to `/logs/artifacts/`. This directory is preserved after the run so outputs can be inspected. Organize with subdirectories if helpful (e.g., `/logs/artifacts/code/`, `/logs/artifacts/reports/`). The directory already exists and is writable.
+
+---
+
+# Novu Conditional Channel Routing
+
+## Background
+Novu is an open-source notification infrastructure platform. The Novu Framework allows developers to define notification workflows in code. In many cases, you want to conditionally send notifications across certain channels based on the payload data (e.g., only send an email if the notification is marked as critical).
+
+## Requirements
+- Initialize a Node.js Express application in `/home/user/project`.
+- Install `express`, `@novu/framework`, and `zod`.
+- Create a Novu Bridge Endpoint at `/api/novu` using `@novu/framework/express`.
+- Define a workflow named `conditional-routing`.
+- The workflow must accept a payload validated by Zod with `userName` (string) and `critical` (boolean).
+- The workflow must contain two steps:
+  1. An `inApp` step named `notify-in-app` that always runs.
+  2. An `email` step named `send-email` that is skipped if `payload.critical` is false.
+
+## Implementation Guide
+1. Initialize a Node project in `/home/user/project`.
+2. Install required dependencies.
+3. Create an `index.js` file.
+4. Define the workflow using `@novu/framework`.
+5. Use the `skip` option in the `email` step to evaluate `payload.critical`.
+6. Expose the workflow via an Express route `/api/novu` using `serve` from `@novu/framework/express`.
+7. Start the server on port 3000.
+
+## Constraints
+- Project path: `/home/user/project`
+- Start command: `node index.js`
+- Port: 3000
+- The server must listen on port 3000.
+EOF
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Running command: echo sms_step_twilio_integration__yo7ipFe > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" -e "s/ANTHROPIC_API_KEY/${ANTHROPIC_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "anthropic": {
+      "kind": "openai",
+      "baseURL": "https://api.anthropic.com/v1",
+      "apiKey": "ANTHROPIC_API_KEY",
+      "models": {
+        "claude-opus-4-6": {
+          "name": "claude-opus-4-6"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: mkdir -p /logs/artifacts
+Command outputs captured
+Running command: export PATH="$HOME/.pochi/bin:$PATH"; pochi --model google/gemini-3.1-pro --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Preserving your work
+
+Save a copy of files you create during this task to `/logs/artifacts/`. This directory is preserved after the run so outputs can be inspected. Organize with subdirectories if helpful (e.g., `/logs/artifacts/code/`, `/logs/artifacts/reports/`). The directory already exists and is writable.
+
+---
+
+# Novu SMS Workflow Integration
+
+## Background
+Create a Novu workflow that sends an SMS notification. You will use the `@novu/framework` to define the workflow in a Next.js application.
+
+## Requirements
+- Initialize a basic Next.js project.
+- Install `@novu/framework`.
+- Create a Novu workflow named `sms-alert`.
+- The workflow must include an SMS step named `send-sms`.
+- The workflow payload must be validated using `zod` and accept a `message` string.
+- The SMS body should be the `message` from the payload.
+- Expose the workflow via a Bridge Endpoint at `/api/novu`.
+
+## Implementation Guide
+1. Create a Next.js app in `/home/user/novu-app` using `npx create-next-app@latest novu-app --typescript --eslint --tailwind --no-src-dir --app --import-alias "@/*"`.
+2. Install `@novu/framework` and `zod`: `npm install @novu/framework zod`.
+3. Create a file `app/api/novu/workflows.ts` and define the `smsAlert` workflow using `step.sms`.
+4. Create the Bridge Endpoint in `app/api/novu/route.ts` using `serve` from `@novu/framework/next` and export `GET`, `POST`, `OPTIONS`.
+
+## Constraints
+- Project path: `/home/user/novu-app`
+- Start command: `npm run dev`
+- Port: 3000
+- The workflow must be exported as `smsAlert`.
+EOF
+Command outputs captured
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured
+The verifier.env contains an API key (often the case for LLM-based verifiers). You will incur costs associated with the API calls.
+The verifier.env contains an API key (often the case for LLM-based verifiers). You will incur costs associated with the API calls.
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Running command: echo count_based_digest_workflow__G6JB9HE > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" -e "s/ANTHROPIC_API_KEY/${ANTHROPIC_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "anthropic": {
+      "kind": "openai",
+      "baseURL": "https://api.anthropic.com/v1",
+      "apiKey": "ANTHROPIC_API_KEY",
+      "models": {
+        "claude-opus-4-6": {
+          "name": "claude-opus-4-6"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: mkdir -p /logs/artifacts
+Command outputs captured
+Running command: export PATH="$HOME/.pochi/bin:$PATH"; pochi --model google/gemini-3.1-pro --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Preserving your work
+
+Save a copy of files you create during this task to `/logs/artifacts/`. This directory is preserved after the run so outputs can be inspected. Organize with subdirectories if helpful (e.g., `/logs/artifacts/code/`, `/logs/artifacts/reports/`). The directory already exists and is writable.
+
+---
+
+# Novu Digest Workflow
+
+## Background
+You need to create a notification workflow using `@novu/framework` that aggregates multiple events using a digest step before sending an email. Although the task is named `count_based_digest_workflow`, `@novu/framework` currently primarily supports time-based digests (e.g., batching for a certain time duration) and cron-based digests. You will implement a time-based digest that batches events for 5 minutes.
+
+## Requirements
+- Initialize a Node.js project in `/home/user/novu-app`.
+- Install `@novu/framework` and `express`.
+- Create a workflow named `digest-workflow`.
+- The workflow should have a digest step named `digest-events` that batches events for 5 minutes.
+- After the digest step, add an email step named `send-email` that sends a summary email containing the number of digested events.
+- Serve the workflow using an Express server on port 3000 at the `/api/novu` endpoint.
+
+## Implementation Guide
+1. `mkdir -p /home/user/novu-app` and `cd /home/user/novu-app`.
+2. `npm init -y` and `npm install @novu/framework express`.
+3. Create `index.js`.
+4. In `index.js`, define the workflow using `workflow` from `@novu/framework`.
+5. Use `step.digest` to wait for 5 minutes (`amount: 5, unit: 'minutes'`).
+6. Use `step.email` to send an email with the subject `Digest Summary` and body `You have ${events.length} new events`.
+7. Use `serve` from `@novu/framework/express` to mount the workflow on an Express app at `/api/novu`.
+8. Start the Express server on port 3000.
+
+## Constraints
+- Project path: /home/user/novu-app
+- Start command: `node index.js`
+- Port: 3000
+EOF
+Running command: apt-get update && apt-get install -y curl ripgrep
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.8 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Running command: apt-get update && apt-get install -y curl ripgrep
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.8 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Running command: echo multi_tenant_workflow__CWXqxP9 > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" -e "s/ANTHROPIC_API_KEY/${ANTHROPIC_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "anthropic": {
+      "kind": "openai",
+      "baseURL": "https://api.anthropic.com/v1",
+      "apiKey": "ANTHROPIC_API_KEY",
+      "models": {
+        "claude-opus-4-6": {
+          "name": "claude-opus-4-6"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: mkdir -p /logs/artifacts
+Command outputs captured
+Running command: export PATH="$HOME/.pochi/bin:$PATH"; pochi --model google/gemini-3.1-pro --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Preserving your work
+
+Save a copy of files you create during this task to `/logs/artifacts/`. This directory is preserved after the run so outputs can be inspected. Organize with subdirectories if helpful (e.g., `/logs/artifacts/code/`, `/logs/artifacts/reports/`). The directory already exists and is writable.
+
+---
+
+# Multi-Tenant Novu Workflow
+
+## Background
+Novu allows you to handle notifications for different tenants (organizations) within a single SaaS app. Create an Express.js application with a Novu Bridge endpoint that defines a multi-tenant workflow.
+
+## Requirements
+- Create a Novu workflow named `multi-tenant-workflow`.
+- The workflow should send an email step.
+- The email subject should be `Update from ${payload.tenantName}`.
+- The email body should be `Hello ${payload.userName}, this is an update for your organization.`.
+- The payload schema must validate `tenantName` and `userName` as strings using Zod.
+- Serve the workflow via an Express endpoint at `/api/novu`.
+
+## Implementation Guide
+1. Initialize a Node.js project in `/home/user/myproject`.
+2. Install `@novu/framework`, `express`, and `zod`.
+3. Create an `index.js` that sets up the Express server.
+4. Define the workflow using `@novu/framework`.
+5. Use the `serve` function from `@novu/framework/express` to create the bridge endpoint at `/api/novu`.
+6. Start the server on port 3000.
+
+## Constraints
+- Project path: `/home/user/myproject`
+- Start command: `node index.js`
+- Port: 3000
+
+EOF
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Running command: echo zod_schema_validation_advanced__hC7XeKp > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" -e "s/ANTHROPIC_API_KEY/${ANTHROPIC_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "anthropic": {
+      "kind": "openai",
+      "baseURL": "https://api.anthropic.com/v1",
+      "apiKey": "ANTHROPIC_API_KEY",
+      "models": {
+        "claude-opus-4-6": {
+          "name": "claude-opus-4-6"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: mkdir -p /logs/artifacts
+Command outputs captured
+Running command: export PATH="$HOME/.pochi/bin:$PATH"; pochi --model google/gemini-3.1-pro --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Preserving your work
+
+Save a copy of files you create during this task to `/logs/artifacts/`. This directory is preserved after the run so outputs can be inspected. Organize with subdirectories if helpful (e.g., `/logs/artifacts/code/`, `/logs/artifacts/reports/`). The directory already exists and is writable.
+
+---
+
+# Novu Workflow with Zod Validation
+
+## Background
+Create a multi-channel Novu workflow that sends an email and an in-app notification, using Zod to validate the payload.
+
+## Requirements
+- Initialize a Node.js project in `/home/user/myproject` with Express.
+- Install `@novu/framework`, `express`, and `zod`.
+- Create a file `novu/workflows.js` that exports a workflow named `welcome-user`.
+- The workflow should have an `inApp` step named `notify-in-app` and an `email` step named `send-email`.
+- Use Zod to define a `payloadSchema` that requires a `userName` (string, default: 'New User') and an optional `age` (number).
+- Create `index.js` that sets up an Express server on port 3000 and exposes the Novu Bridge Endpoint at `/api/novu` serving the `welcome-user` workflow.
+
+## Implementation Guide
+1. `mkdir -p /home/user/myproject && cd /home/user/myproject`
+2. `npm init -y`
+3. `npm install express @novu/framework zod`
+4. Write `novu/workflows.js` using `@novu/framework` and `zod`.
+5. Write `index.js` using `@novu/framework/express`.
+
+## Constraints
+- Project path: /home/user/myproject
+- Start command: `node index.js`
+- Port: 3000
+EOF
+Command outputs captured
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured
+The verifier.env contains an API key (often the case for LLM-based verifiers). You will incur costs associated with the API calls.
+The verifier.env contains an API key (often the case for LLM-based verifiers). You will incur costs associated with the API calls.
+Running command: apt-get update && apt-get install -y curl ripgrep
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.8 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured
+The verifier.env contains an API key (often the case for LLM-based verifiers). You will incur costs associated with the API calls.
+The verifier.env contains an API key (often the case for LLM-based verifiers). You will incur costs associated with the API calls.
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Running command: echo delay_step_implementation__tUbH9LL > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" -e "s/ANTHROPIC_API_KEY/${ANTHROPIC_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "anthropic": {
+      "kind": "openai",
+      "baseURL": "https://api.anthropic.com/v1",
+      "apiKey": "ANTHROPIC_API_KEY",
+      "models": {
+        "claude-opus-4-6": {
+          "name": "claude-opus-4-6"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: mkdir -p /logs/artifacts
+Command outputs captured
+Running command: export PATH="$HOME/.pochi/bin:$PATH"; pochi --model google/gemini-3.1-pro --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Preserving your work
+
+Save a copy of files you create during this task to `/logs/artifacts/`. This directory is preserved after the run so outputs can be inspected. Organize with subdirectories if helpful (e.g., `/logs/artifacts/code/`, `/logs/artifacts/reports/`). The directory already exists and is writable.
+
+---
+
+# Implement a Delay Step in Novu Workflow
+
+## Background
+You are building a notification system using the Novu Framework with an Express.js backend. You need to implement a workflow that delays a follow-up notification by a specific duration (e.g., 24 hours) after an initial trigger.
+
+## Requirements
+- Initialize an Express.js application.
+- Install `@novu/framework` and `express`.
+- Create a Novu workflow named `follow-up-workflow`.
+- The workflow must include a delay step (named `reminder-delay`) configured to pause execution for 24 hours.
+- Following the delay, it must include an email step (named `follow-up-email`) with the subject `How are you liking our product?`.
+- Expose the Novu Bridge Endpoint at `/api/novu` in the Express app.
+
+## Implementation Guide
+1. Initialize a Node.js project in `/home/user/myproject`.
+2. Install `express` and `@novu/framework`.
+3. Create a file `workflows.js` (or `.ts` if using TypeScript) to define your `follow-up-workflow` using `workflow` and `step` from `@novu/framework`.
+4. In the workflow definition, use `await step.delay('reminder-delay', async () => ({ amount: 24, unit: 'hours' }))`.
+5. Next, use `await step.email('follow-up-email', async () => ({ subject: 'How are you liking our product?', body: 'Just checking in!' }))`.
+6. Create an `index.js` file that sets up an Express app. Import the workflow and use the `serve` function from `@novu/framework/express` to mount it on `/api/novu`.
+7. Start the Express server on port 3000.
+
+## Constraints
+- Project path: `/home/user/myproject`
+- Start command: `node index.js`
+- Port: 3000
+- The workflow must be named `follow-up-workflow`.
+- The delay step must be named `reminder-delay`.
+- The email step must be named `follow-up-email`.
+
+## Integrations
+- None
+EOF
+Running command: apt-get update && apt-get install -y curl ripgrep
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.8 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Running command: echo dynamic_email_subject__BfN4PcU > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" -e "s/ANTHROPIC_API_KEY/${ANTHROPIC_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "anthropic": {
+      "kind": "openai",
+      "baseURL": "https://api.anthropic.com/v1",
+      "apiKey": "ANTHROPIC_API_KEY",
+      "models": {
+        "claude-opus-4-6": {
+          "name": "claude-opus-4-6"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: mkdir -p /logs/artifacts
+Command outputs captured
+Running command: export PATH="$HOME/.pochi/bin:$PATH"; pochi --model google/gemini-3.1-pro --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Preserving your work
+
+Save a copy of files you create during this task to `/logs/artifacts/`. This directory is preserved after the run so outputs can be inspected. Organize with subdirectories if helpful (e.g., `/logs/artifacts/code/`, `/logs/artifacts/reports/`). The directory already exists and is writable.
+
+---
+
+# Dynamic Email Subject with Novu Framework
+
+## Background
+Novu is an open-source notification infrastructure platform. You can define workflows using code. In this task, you will create a simple workflow that dynamically sets the subject of an email notification based on the payload.
+
+## Requirements
+- Initialize a Node.js project in `/home/user/novu-project`.
+- Install `@novu/framework`, `zod`, `express`, and `typescript`.
+- Create a file `workflow.ts` that defines and exports a workflow named `dynamic-email`.
+- The workflow should expect a payload with `orderId` (string) and `customerName` (string), validated using Zod.
+- It must have an email step named `send-email`.
+- The email subject must be dynamically generated as: `Order <orderId> confirmed for <customerName>`.
+- The email body can be any string (e.g., "Hello").
+- Create an `index.ts` that sets up an Express server and uses `serve` from `@novu/framework/express` to expose the workflow at `/api/novu`.
+- The server should listen on port 3000.
+
+## Implementation Guide
+1. Create `/home/user/novu-project` and run `npm init -y`.
+2. Install the necessary packages: `npm install @novu/framework zod express typescript @types/express tsx`.
+3. Create `workflow.ts` with the workflow definition.
+4. Create `index.ts` to serve the workflow.
+
+## Constraints
+- Project path: `/home/user/novu-project`
+- Start command: `npx tsx index.ts`
+- Port: 3000
+EOF
+Command outputs captured
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured
+The verifier.env contains an API key (often the case for LLM-based verifiers). You will incur costs associated with the API calls.
+The verifier.env contains an API key (often the case for LLM-based verifiers). You will incur costs associated with the API calls.
+Command outputs captured
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured
+The verifier.env contains an API key (often the case for LLM-based verifiers). You will incur costs associated with the API calls.
+The verifier.env contains an API key (often the case for LLM-based verifiers). You will incur costs associated with the API calls.
+Command outputs captured
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured
+The verifier.env contains an API key (often the case for LLM-based verifiers). You will incur costs associated with the API calls.
+The verifier.env contains an API key (often the case for LLM-based verifiers). You will incur costs associated with the API calls.
+Running command: apt-get update && apt-get install -y curl ripgrep
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.8 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Running command: apt-get update && apt-get install -y curl ripgrep
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Running command: echo workflow_error_handling__Rw3sTyR > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" -e "s/ANTHROPIC_API_KEY/${ANTHROPIC_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "anthropic": {
+      "kind": "openai",
+      "baseURL": "https://api.anthropic.com/v1",
+      "apiKey": "ANTHROPIC_API_KEY",
+      "models": {
+        "claude-opus-4-6": {
+          "name": "claude-opus-4-6"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: mkdir -p /logs/artifacts
+Command outputs captured
+Running command: export PATH="$HOME/.pochi/bin:$PATH"; pochi --model google/gemini-3.1-pro --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Preserving your work
+
+Save a copy of files you create during this task to `/logs/artifacts/`. This directory is preserved after the run so outputs can be inspected. Organize with subdirectories if helpful (e.g., `/logs/artifacts/code/`, `/logs/artifacts/reports/`). The directory already exists and is writable.
+
+---
+
+# Novu Workflow Error Handling
+
+## Background
+Novu provides a code-first framework for defining notification workflows. It supports payload validation using Zod and allows you to write custom code in custom steps. This task focuses on implementing a workflow that validates its payload and correctly surfaces errors from custom steps.
+
+## Requirements
+- Create an Express.js application that serves a Novu Bridge endpoint.
+- Define a Novu workflow named `error-handling-workflow`.
+- The workflow must use a Zod schema for payload validation, requiring `userId` (string) and `simulateError` (boolean, defaults to false).
+- Implement a custom step named `fetch-data`. If `payload.simulateError` is true, the step must throw an `Error` with the message `"External API Failed"`. If false, it returns `{ status: "ok" }`.
+- Implement an `email` step named `send-email` that sends an email with the subject `"Process Complete"` and a body containing the status from the custom step.
+
+## Implementation Guide
+1. Initialize a Node.js project in `/home/user/novu-app`.
+2. Install `express`, `@novu/framework`, and `zod`.
+3. Create `index.js`.
+4. Define the workflow using the `@novu/framework` `workflow` function.
+5. Set up an Express server and mount the Novu Bridge using the `serve` function from `@novu/framework/express` at the `/api/novu` route.
+6. Ensure the server listens on port 3000.
+
+## Constraints
+- Project path: `/home/user/novu-app`
+- Start command: `node index.js`
+- Port: 3000
+EOF
+Command outputs captured
+Running command: set -euo pipefail; curl -fsSL https://getpochi.com/install.sh | bash -x -s -- pochi-v0.6.8 && mkdir -p /logs/agent/pochi && ~/.pochi/bin/pochi --version
+Command outputs captured
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured
+The verifier.env contains an API key (often the case for LLM-based verifiers). You will incur costs associated with the API calls.
+The verifier.env contains an API key (often the case for LLM-based verifiers). You will incur costs associated with the API calls.
+Command outputs captured
+Running command: ln -sf ~/.pochi/bin/pochi /usr/local/bin/pochi
+Command outputs captured
+Running command: echo override_provider_config__dmMwf45 > /logs/artifacts/trial_id
+Command outputs captured
+Running command: mkdir -p ~/.pochi && cat << 'EOF' | sed -e "s/OPENAI_API_KEY/${OPENAI_API_KEY}/g" -e "s/DEEPINFRA_API_KEY/${DEEPINFRA_API_KEY}/g" -e "s/ANTHROPIC_API_KEY/${ANTHROPIC_API_KEY}/g" > ~/.pochi/config.jsonc
+{
+  "providers": {
+    "deepinfra": {
+      "kind": "openai",
+      "baseURL": "https://api.deepinfra.com/v1/openai",
+      "apiKey": "DEEPINFRA_API_KEY",
+      "models": {
+        "zai-org/GLM-4.7-Flash": {
+          "name": "glm-4.7-flash"
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "kimi-K2.6"
+        },
+        "deepseek-ai/DeepSeek-V4-Pro": {
+          "name": "DeepSeek-V4-Pro"
+        }
+      }
+    },
+    "anthropic": {
+      "kind": "openai",
+      "baseURL": "https://api.anthropic.com/v1",
+      "apiKey": "ANTHROPIC_API_KEY",
+      "models": {
+        "claude-opus-4-6": {
+          "name": "claude-opus-4-6"
+        }
+      }
+    },
+    "openai": {
+      "kind": "openai",
+      "baseURL": "https://api.openai.com/v1",
+      "apiKey": "OPENAI_API_KEY",
+      "models": {
+        "gpt-5.4": {
+          "name": "gpt-5.4"
+        }
+      }
+    }
+  }
+}
+EOF
+Command outputs captured
+Running command: mkdir -p /logs/artifacts
+Command outputs captured
+Running command: export PATH="$HOME/.pochi/bin:$PATH"; pochi --model google/gemini-3.1-pro --max-steps 200 --max-retries 10 --blobs-dir /logs/agent/pochi/blobs --experimental-stream-trajectory /logs/agent/pochi/trajectory.jsonl > >(tee /logs/agent/pochi/stdout.txt) 2> >(tee /logs/agent/pochi/stderr.txt >&2) <<'EOF'
+# Preserving your work
+
+Save a copy of files you create during this task to `/logs/artifacts/`. This directory is preserved after the run so outputs can be inspected. Organize with subdirectories if helpful (e.g., `/logs/artifacts/code/`, `/logs/artifacts/reports/`). The directory already exists and is writable.
+
+---
+
+# Novu Workflow with Dynamic Provider Override
+
+## Background
+You have a Next.js project with a Novu endpoint initialized at `/home/user/app`.
+You need to implement a complex workflow that fetches a user's notification preferences from an external API and dynamically overrides the email provider configuration based on those preferences.
+
+## Requirements
+1. In `/home/user/app/app/api/novu/workflows.ts`, create and export a workflow named `dynamic-provider`.
+2. The workflow must have a payload schema defined as `z.object({ orderId: z.string() })`.
+3. The workflow must consist of two steps:
+   - A custom step named `fetch-config` that makes an HTTP GET request to `http://localhost:4000/config?userId=${subscriber.subscriberId}` and returns the parsed JSON response.
+   - An email step named `send-email`.
+4. The external API returns a JSON object with this shape:
+   ```ts
+   {
+     provider: 'sendgrid' | 'mailgun' | 'none',
+     templateId: string,
+     data: Record<string, any>
+   }
+   ```
+5. The email step must be configured as follows:
+   - `subject`: `"Order <orderId>"` (e.g., "Order ord_123")
+   - `body`: `"Your order is processing."`
+   - `providers`: Dynamically overridden based on the output of the `fetch-config` step.
+     - If `provider` is `'sendgrid'`, override the `sendgrid` config with `templateId` and `dynamicTemplateData` (set to the `data` object).
+     - If `provider` is `'mailgun'`, override the `mailgun` config with `template` (set to `templateId`) and `'h:X-Mailgun-Variables'` (set to `JSON.stringify(data)`).
+     - If `provider` is `'none'` or missing, do not return any `providers` override.
+
+## Constraints
+- Project path: `/home/user/app`
+- Start command: `npm run dev`
+- Port: 3000
+- You must use `@novu/framework` and `zod`.
+- Do not use any external libraries for fetching data, use the native `fetch` API.
+EOF
+Command outputs captured
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured
+The verifier.env contains an API key (often the case for LLM-based verifiers). You will incur costs associated with the API calls.
+The verifier.env contains an API key (often the case for LLM-based verifiers). You will incur costs associated with the API calls.
+Command outputs captured
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured
+The verifier.env contains an API key (often the case for LLM-based verifiers). You will incur costs associated with the API calls.
+The verifier.env contains an API key (often the case for LLM-based verifiers). You will incur costs associated with the API calls.
+Command outputs captured
+Running command: rm -f ~/.pochi/config.jsonc
+Command outputs captured
+The verifier.env contains an API key (often the case for LLM-based verifiers). You will incur costs associated with the API calls.
+The verifier.env contains an API key (often the case for LLM-based verifiers). You will incur costs associated with the API calls.

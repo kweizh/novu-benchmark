@@ -1,0 +1,47 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 3,
+            "passed": 3,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1778926786.8454297,
+            "stop": 1778926790.4787683
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_workflow_file_exists",
+                "status": "passed",
+                "duration": 0.00032777595333755016,
+                "start": 1778926786.8507268,
+                "stop": 1778926786.8512309,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_workflow_compiles",
+                "status": "passed",
+                "duration": 3.6263943169033155,
+                "start": 1778926786.8513174,
+                "stop": 1778926790.4779768,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            },
+            {
+                "name": "test_final_state.py::test_workflow_schema_default_value",
+                "status": "passed",
+                "duration": 0.00036464305594563484,
+                "start": 1778926790.4781036,
+                "stop": 1778926790.4786081,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            }
+        ]
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1779068470.1298537,
+            "stop": 1779068472.234765
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_api_novu_endpoint",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 2.0316837020218372,
+                "start": 1779068470.1469264,
+                "stop": 1779068472.2343862,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "start_app = None\n\n    def test_api_novu_endpoint(start_app):\n        url = \"http://localhost:3000/api/novu?action=discover\"\n        req = urllib.request.Request(url)\n        try:\n>           with urllib.request.urlopen(req) as response:\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\ntests/test_final_state.py:49: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nusr/lib/python3.12/urllib/request.py:215: in urlopen\n    return opener.open(url, data, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nusr/lib/python3.12/urllib/request.py:521: in open\n    response = meth(req, response)\n               ^^^^^^^^^^^^^^^^^^^\nusr/lib/python3.12/urllib/request.py:630: in http_response\n    response = self.parent.error(\nusr/lib/python3.12/urllib/request.py:559: in error\n    return self._call_chain(*args)\n           ^^^^^^^^^^^^^^^^^^^^^^^\nusr/lib/python3.12/urllib/request.py:492: in _call_chain\n    result = func(*args)\n             ^^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <urllib.request.HTTPDefaultErrorHandler object at 0xe6178c90f710>\nreq = <urllib.request.Request object at 0xe6178c8fd3a0>\nfp = <http.client.HTTPResponse object at 0xe6178c8fdf00>, code = 500\nmsg = 'Internal Server Error'\nhdrs = <http.client.HTTPMessage object at 0xe6178c5e3740>\n\n    def http_error_default(self, req, fp, code, msg, hdrs):\n>       raise HTTPError(req.full_url, code, msg, hdrs, fp)\nE       urllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nusr/lib/python3.12/urllib/request.py:639: HTTPError\n\nDuring handling of the above exception, another exception occurred:\n\nstart_app = None\n\n    def test_api_novu_endpoint(start_app):\n        url = \"http://localhost:3000/api/novu?action=discover\"\n        req = urllib.request.Request(url)\n        try:\n            with urllib.request.urlopen(req) as response:\n                assert response.status == 200, f\"Expected status 200, got {response.status}\"\n                data = json.loads(response.read().decode('utf-8'))\n        except Exception as e:\n>           pytest.fail(f\"Failed to fetch {url}: {e}\")\nE           Failed: Failed to fetch http://localhost:3000/api/novu?action=discover: HTTP Error 500: Internal Server Error\n\ntests/test_final_state.py:53: Failed",
+                "message": "The test failed in the call phase due to an exception"
+            }
+        ]
+    }
+}

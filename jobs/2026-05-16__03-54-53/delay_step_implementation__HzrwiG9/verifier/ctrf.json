@@ -1,0 +1,29 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1778929691.2152262,
+            "stop": 1778929696.2724717
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_workflows_discovered",
+                "status": "passed",
+                "duration": 5.046361900982447,
+                "start": 1778929691.2249928,
+                "stop": 1778929696.272004,
+                "retries": 0,
+                "file_path": "test_final_state.py"
+            }
+        ]
+    }
+}

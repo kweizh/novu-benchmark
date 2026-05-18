@@ -1,0 +1,42 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 2,
+            "passed": 0,
+            "failed": 2,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1778930651.5767117,
+            "stop": 1778930682.0843356
+        },
+        "tests": [
+            {
+                "name": "test_final_state.py::test_api_endpoint_responds",
+                "status": "failed",
+                "duration": 30.47861581284087,
+                "start": 1778930651.5858543,
+                "stop": 1778930682.0817194,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "@pytest.fixture(scope=\"module\")\n    def start_app():\n        # Install dependencies\n        subprocess.run([\"npm\", \"install\"], cwd=PROJECT_DIR, check=True)\n    \n        # Start the app\n        process = subprocess.Popen(\n            [\"node\", \"index.js\"],\n            cwd=PROJECT_DIR,\n            stdout=subprocess.PIPE,\n            stderr=subprocess.PIPE,\n            preexec_fn=os.setsid\n        )\n    \n        # Wait for the app to be ready\n        if not wait_for_port(3000):\n            import signal\n            os.killpg(os.getpgid(process.pid), signal.SIGTERM)\n>           pytest.fail(\"App failed to start and listen on port 3000.\")\nE           Failed: App failed to start and listen on port 3000.\n\ntests/test_final_state.py:38: Failed"
+            },
+            {
+                "name": "test_final_state.py::test_skip_logic_implemented",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0008061151020228863,
+                "start": 1778930682.0819001,
+                "stop": 1778930682.0841136,
+                "retries": 0,
+                "file_path": "test_final_state.py",
+                "trace": "def test_skip_logic_implemented():\n        \"\"\"Verify that the code contains the skip logic for the email step based on payload.critical.\"\"\"\n        index_path = os.path.join(PROJECT_DIR, \"index.js\")\n        assert os.path.isfile(index_path), f\"index.js not found at {index_path}\"\n    \n        with open(index_path, \"r\") as f:\n            content = f.read()\n    \n        # Check for email step definition\n>       assert \"step.email\" in content, \"Expected 'step.email' to be defined in the workflow.\"\nE       AssertionError: Expected 'step.email' to be defined in the workflow.\nE       assert 'step.email' in \"const express = require('express');\\nconst { serve } = require('@novu/framework/express');\\nconst { workflow, inApp, ...rkflows: [conditionalRouting] }));\\n\\napp.listen(3000, () => {\\n  console.log('Server listening on port 3000');\\n});\\n\"\n\ntests/test_final_state.py:68: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            }
+        ]
+    }
+}

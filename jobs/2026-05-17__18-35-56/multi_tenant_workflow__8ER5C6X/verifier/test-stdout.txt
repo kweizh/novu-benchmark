@@ -1,0 +1,82 @@
+downloading uv 0.9.7 aarch64-unknown-linux-gnu
+no checksums to verify
+installing to /root/.local/bin
+  uv
+  uvx
+everything's installed!
+
+To add $HOME/.local/bin to your PATH, either restart your shell or run:
+
+    source $HOME/.local/bin/env (sh, bash, zsh)
+    source $HOME/.local/bin/env.fish (fish)
+Downloading pygments (1.2MiB)
+ Downloading pygments
+Installed 7 packages in 7ms
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.6.0
+rootdir: /tests
+plugins: json-ctrf-0.3.5
+collected 1 item
+
+tests/test_final_state.py F                                              [100%]
+
+=================================== FAILURES ===================================
+__________________________ test_novu_bridge_endpoint ___________________________
+
+start_app = None
+
+    def test_novu_bridge_endpoint(start_app):
+        """Priority 1: Test the Novu bridge endpoint response."""
+        try:
+            req = urllib.request.Request("http://localhost:3000/api/novu?action=discover", method="GET")
+>           with urllib.request.urlopen(req) as response:
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_final_state.py:52: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+usr/lib/python3.12/urllib/request.py:215: in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+usr/lib/python3.12/urllib/request.py:521: in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+usr/lib/python3.12/urllib/request.py:630: in http_response
+    response = self.parent.error(
+usr/lib/python3.12/urllib/request.py:559: in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+usr/lib/python3.12/urllib/request.py:492: in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <urllib.request.HTTPDefaultErrorHandler object at 0xf5d1648bc7d0>
+req = <urllib.request.Request object at 0xf5d16439d0d0>
+fp = <http.client.HTTPResponse object at 0xf5d16439e110>, code = 404
+msg = 'Not Found', hdrs = <http.client.HTTPMessage object at 0xf5d164083860>
+
+    def http_error_default(self, req, fp, code, msg, hdrs):
+>       raise HTTPError(req.full_url, code, msg, hdrs, fp)
+E       urllib.error.HTTPError: HTTP Error 404: Not Found
+
+usr/lib/python3.12/urllib/request.py:639: HTTPError
+
+During handling of the above exception, another exception occurred:
+
+start_app = None
+
+    def test_novu_bridge_endpoint(start_app):
+        """Priority 1: Test the Novu bridge endpoint response."""
+        try:
+            req = urllib.request.Request("http://localhost:3000/api/novu?action=discover", method="GET")
+            with urllib.request.urlopen(req) as response:
+                assert response.getcode() == 200, f"Expected status code 200, got {response.getcode()}"
+                data = json.loads(response.read().decode())
+        except Exception as e:
+>           pytest.fail(f"Failed to fetch from /api/novu: {e}")
+E           Failed: Failed to fetch from /api/novu: HTTP Error 404: Not Found
+
+tests/test_final_state.py:56: Failed
+=========================== short test summary info ============================
+FAILED tests/test_final_state.py::test_novu_bridge_endpoint - Failed: Failed ...
+============================== 1 failed in 5.44s ===============================
