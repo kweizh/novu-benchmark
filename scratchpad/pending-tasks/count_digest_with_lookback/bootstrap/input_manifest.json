@@ -1,0 +1,7 @@
+{
+  "library_name": "novu",
+  "task_name": "count_digest_with_lookback",
+  "complexity_level": "multi-step sequential command set",
+  "research_plan_path": "user-prompt-inline",
+  "output_dir": "scratchpad/pending-tasks/"
+}

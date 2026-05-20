@@ -1,7 +1,0 @@
-{
-  "library_name": "Novu",
-  "complexity_level": "simple set of 2-5 commands",
-  "deep_research_path": "../../plan.md",
-  "task_name": "email_push_multi_channel",
-  "output_dir": "../../scratchpad/pending-tasks"
-}

@@ -1,0 +1,7 @@
+{
+  "library_name": "Novu",
+  "task_name": "email_step_attachments_array",
+  "complexity_level": "multi-step sequential command set",
+  "research_plan_path": "N/A (user-provided concept; verified via https://docs.novu.co/framework/typescript/steps/email and https://docs.novu.co/platform/integrations/email)",
+  "output_dir": "scratchpad/pending-tasks/"
+}
