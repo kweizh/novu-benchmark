@@ -1,7 +1,0 @@
-{
-  "library_name": "novu",
-  "task_name": "skip_step_with_payload_condition",
-  "complexity_level": "multi-step sequential command set",
-  "research_plan_path": "n/a (concept provided directly by user)",
-  "output_dir": "scratchpad/pending-tasks/"
-}

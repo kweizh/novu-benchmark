@@ -1,7 +1,0 @@
-{
-  "library_name": "Novu",
-  "task_name": "zod_payload_nested_arrays",
-  "complexity_level": "multi-step sequential command set",
-  "research_plan_path": "N/A - provided inline by user prompt",
-  "output_dir": "scratchpad/pending-tasks/"
-}

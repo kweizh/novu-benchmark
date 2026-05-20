@@ -1,7 +1,0 @@
-{
-  "library_name": "Novu",
-  "task_name": "multi_workflow_single_endpoint",
-  "complexity_level": "multi-step sequential command set",
-  "research_plan_path": "N/A",
-  "output_dir": "scratchpad/pending-tasks/"
-}

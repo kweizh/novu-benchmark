@@ -1,7 +1,0 @@
-{
-  "library_name": "Novu",
-  "task_name": "hono_bridge_endpoint_setup",
-  "complexity_level": "simple set of 2-5 commands",
-  "research_plan_path": "https://docs.novu.co/framework/overview",
-  "output_dir": "scratchpad/pending-tasks/"
-}

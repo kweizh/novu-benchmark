@@ -1,7 +1,0 @@
-{
-  "library_name": "Novu",
-  "task_name": "trigger_workflow_via_node_sdk",
-  "complexity_level": "simple set of 2-5 commands",
-  "research_plan_path": "https://docs.novu.co/api-reference/events/trigger-event",
-  "output_dir": "scratchpad/pending-tasks/"
-}

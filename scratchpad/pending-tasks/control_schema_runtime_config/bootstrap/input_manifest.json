@@ -1,7 +1,0 @@
-{
-  "library_name": "Novu",
-  "task_name": "control_schema_runtime_config",
-  "complexity_level": "multi-step sequential command set",
-  "research_plan_path": "N/A - inline concept provided by user",
-  "output_dir": "scratchpad/pending-tasks/"
-}

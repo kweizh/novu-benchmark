@@ -1,7 +1,0 @@
-{
-  "library_name": "Novu",
-  "task_name": "json_schema_payload_validation",
-  "complexity_level": "multi-step sequential command set",
-  "research_plan_path": "https://docs.novu.co/framework/typescript/workflow",
-  "output_dir": "scratchpad/pending-tasks/"
-}

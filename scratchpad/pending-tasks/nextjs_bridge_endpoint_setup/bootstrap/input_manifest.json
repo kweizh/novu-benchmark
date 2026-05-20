@@ -1,7 +1,0 @@
-{
-  "library_name": "novu",
-  "task_name": "nextjs_bridge_endpoint_setup",
-  "complexity_level": "multi-step sequential command set",
-  "research_plan_path": "https://docs.novu.co/framework/quickstart/nextjs",
-  "output_dir": "scratchpad/pending-tasks/"
-}
